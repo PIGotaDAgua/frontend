@@ -1,9 +1,10 @@
 import React from 'react';
-import logo from './logo.svg';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import Login from "./pages/login/Login";
 import About from "./pages/about/About";
 import Contact from "./pages/contact/Contact";
+import Navbar from './components/statics/navbar/Navbar';
+import Footer from './components/statics/footer/Footer';
 import './App.css';
 
 function App() {
