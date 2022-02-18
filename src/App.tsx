@@ -5,6 +5,7 @@ import About from "./pages/about/About";
 import Contact from "./pages/contact/Contact";
 import Navbar from './components/statics/navbar/Navbar';
 import Footer from './components/statics/footer/Footer';
+import Home from './pages/home/Home'
 import './App.css';
 
 function App() {
@@ -18,6 +19,9 @@ function App() {
           </Route>
           <Route path='/login'>
             <Login />
+          </Route>
+          <Route path='/home'>
+            <Home />
           </Route>
           <Route path='/about'>
             <About />
