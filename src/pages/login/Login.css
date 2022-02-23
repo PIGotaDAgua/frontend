@@ -1,17 +1,12 @@
 .textos1 {
-    font-weight:bold !important;
+    font-weight: bold !important;
 }
 
-.imagem {
-    background-image: url(https://i.imgur.com/4iVfLqJ.jpg) !important;
+.logo {
+    background-image: url(https://i.imgur.com/Uap25qO.png) !important;
     background-repeat: no-repeat;
-    width: 100vh; 
+    width: 100vh;
     min-height: 100vh;
     background-size: cover;
     background-position: center;
-
-}
-
-.text-decorator-none {
-    text-decoration: none;
 }

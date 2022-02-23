@@ -6,7 +6,9 @@ import Contact from "./pages/contact/Contact";
 import Navbar from './components/statics/navbar/Navbar';
 import Footer from './components/statics/footer/Footer';
 import Home from './pages/home/Home'
+import DescubraMais from './pages/descubramais/DescubraMais';
 import './App.css';
+import CadastroUsuario from './pages/cadastrousuario/CadastroUsuario';
 
 function App() {
   return (
@@ -28,6 +30,12 @@ function App() {
           </Route>
           <Route path='/contact'>
             <Contact />
+          </Route>
+          <Route path='/descubra'>
+            <DescubraMais />
+          </Route>
+          <Route path='/cadastrousuario'>
+            <CadastroUsuario />
           </Route>
         </div>
       </Switch>
