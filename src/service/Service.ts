@@ -13,3 +13,9 @@ export const login = async(url: any,dados: any,setDado: any) => {
     const resposta = await api.post(url, dados)
     setDado(resposta.data.token)
 }
+
+// eslint-disable-next-line no-lone-blocks
+{/*export const validacaoData = async(url: any, dados: any, setDado: any) =>{   => Pegar a informação da regra de cadastro de idade
+    const resposta = await api.post(url, dados)
+    setDado(resposta.data)
+}*/}

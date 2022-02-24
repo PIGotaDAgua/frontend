@@ -4,7 +4,7 @@ interface User{
     usuario: string;
     senha: string;
     foto?: string | null;
-    dataNascimento: Date;
+    dataNascimento: string;
 }
 
 export default User;

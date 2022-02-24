@@ -1,6 +1,7 @@
 import React from 'react';
 import { AppBar, Toolbar, Typography, Box } from '@material-ui/core';
 import { Link } from 'react-router-dom';
+import logo from '../../../assets/images/logo.png';
 import './Navbar.css';
 
 
@@ -10,9 +11,7 @@ function Navbar() {
             <AppBar position="static">
                 <Toolbar variant="dense" className='backgroundNav'>
                     <Box style={{ cursor: "pointer" }} >
-                        <Typography className='backgroundNav' variant="h5">
-                            Gota D'Água
-                        </Typography>
+                        <img  className='logo1' src={logo} alt="logo" />
                     </Box>
                     <hr />
                     <Box display="flex" justifyContent="start">
