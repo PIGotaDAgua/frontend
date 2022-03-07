@@ -49,10 +49,11 @@ function DeletarTema() {
         function sim() {
             history.push('/tema')
             deleteId(`/tema/${id}`, {
-              headers: {
-                'Authorization': token
-              }
-            });
+                headers: {
+                    'Authorization': token
+                }
+            })
+        
             toast.success('Tema excluído.', {
                 position: 'top-right',
                 autoClose: 3000,

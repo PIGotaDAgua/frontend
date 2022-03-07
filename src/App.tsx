@@ -9,10 +9,19 @@ import Home from './pages/home/Home'
 import DescubraMais from './pages/descubramais/DescubraMais';
 import './App.css';
 import CadastroUsuario from './pages/cadastrousuario/CadastroUsuario';
+import ListaTema from './components/temas/listaTema/ListaTema';
+import CadastroTema from './components/temas/cadastroTema/CadastroTema';
+import DeletarTema from './components/temas/deletarTema/DeletarTema';
+import { ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+
 
 function App() {
   return (
+   
+    
     <Router>
+      <ToastContainer />
       <Navbar />
       <Switch>
         <div style={{ minHeight: '100vh' }}>
@@ -37,10 +46,37 @@ function App() {
           <Route path='/cadastrousuario'>
             <CadastroUsuario />
           </Route>
+          <Route path='/tema'>
+          <ListaTema />
+        </Route>
+        {/*<Route path='/postagem'>
+          <ListaPostagem />
+  </Route>
+        <Route exact path='/formularioPostagem'>
+            <CadastroPostagem />
+          </Route>
+          <Route exact path='/formularioPostagem/:id'>
+            <CadastroPostagem />
+          </Route>
+          <Route exact path='/deletarPostagem/:id'>
+            <DeletarPostagem />
+          </Route>*/}
+          <Route exact path='/formularioTema'>
+            <CadastroTema />
+          </Route>
+          <Route exact path='/formularioTema/:id'>
+            <CadastroTema />
+          </Route>
+          <Route exact path='/deletarTema/:id'>
+            <DeletarTema />
+          </Route>
+
         </div>
       </Switch>
       <Footer />
     </Router>
+    
+
   );
 }
 

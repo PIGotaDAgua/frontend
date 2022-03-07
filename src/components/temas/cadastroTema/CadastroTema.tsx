@@ -29,7 +29,8 @@ function CadastroTema() {
                 draggable: false,
                 theme: 'colored',
                 progress: undefined
-            });            history.push('/login')
+            });           
+                history.push('/login')
         }
     }, [token])
 
@@ -39,7 +40,7 @@ function CadastroTema() {
     }, [id])
 
     async function findById(id: string) {
-        buscaId(`tema/${id}`, setTema, {
+        buscaId(`/tema/${id}`, setTema, {
             headers: {
                 'Authorization': token
             }
@@ -105,6 +106,7 @@ function CadastroTema() {
                 <Typography variant='h3' color ='textSecondary' component='h1' align='center'>
                     Formulário para cadastro de tema
                 </Typography>
+                <TextField value={tema.tema} onChange={(e: ChangeEvent<HTMLInputElement>) => updateTema(e)} id='tema' label='tema' variant='outlined' name='tema' margin='normal' fullWidth />
                 <TextField value={tema.descricao} onChange={(e: ChangeEvent<HTMLInputElement>) => updateTema(e)} id='descricao' label='descricao' variant='outlined' name='descricao' margin='normal' fullWidth />
                 <Button type='submit' variant='contained' color='primary' className='btF'>
                     Finalizar
