@@ -1,11 +1,34 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { Typography, Box, Button } from '@material-ui/core'
 import { Grid } from '@material-ui/core'
-import Navbar from "../../components/statics/navbar/Navbar";
 import './Home.css';
+import { useHistory } from "react-router-dom";
+import useLocalStorage from "react-use-localstorage";
+import { toast } from "react-toastify";
 
 //Componentes, nada mais são que funções.
 function Home() {
+
+    let history = useHistory();
+
+    const [ token, setToken ] = useLocalStorage ('token');
+
+    useEffect(() => {
+        if (token === '') {
+            toast.error('Para continuar, é preciso estar logado.', {
+                position: 'top-right',
+                autoClose: 3000,
+                hideProgressBar: false,
+                closeOnClick: true,
+                pauseOnHover: true,
+                draggable: false,
+                theme: 'colored',
+                progress: undefined
+            });
+            history.push('/login')
+
+        }
+    }, [token])
     return (
         <>
             <Grid container direction="row" justifyContent="center" alignItems="center" className="box">
