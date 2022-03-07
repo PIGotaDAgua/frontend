@@ -5,6 +5,7 @@ import useLocalStorage from 'react-use-localstorage';
 import UserLogin from '../../models/UserLogin';
 import { login } from '../../service/Service';
 import './Login.css';
+import { toast } from 'react-toastify';
 
 function Login() {
 
@@ -39,9 +40,30 @@ function Login() {
         e.preventDefault();
         try {
             await login(`/usuario/logar`, userLogin, setToken)
-            alert('Você está conectado a nós!☺');
+        
+            toast.success('Você está conectado a nós!☺', {
+                position: 'top-right',
+                autoClose: 3000,
+                hideProgressBar: false,
+                closeOnClick: true,
+                pauseOnHover: true,
+                draggable: false,
+                theme: 'colored',
+                progress: undefined
+            });
         } catch (error) {
-            alert('Ops... Você digitou alguma informação incorreta ou ainda não é cadastrade! Mas não desista, tente novamente.');
+           
+            toast.error('Ops... Você digitou alguma informação incorreta ou ainda não é cadastrade! Mas não desista, tente novamente.', {
+                position: 'top-right',
+                autoClose: 3000,
+                hideProgressBar: false,
+                closeOnClick: true,
+                pauseOnHover: true,
+                draggable: false,
+                theme: 'colored',
+                progress: undefined
+            });
+
 
         }
         console.log('userLogin:' + Object.values(userLogin));

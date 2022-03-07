@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react'
 import {Box, Card, CardActions, CardContent, Button, Typography} from '@material-ui/core';
 import './DeletarTema.css';
 import { useHistory, useParams } from 'react-router-dom';
-import { buscaId, deleteId } from '../../../services/Service';
+import { buscaId, deleteId } from '../../../service/Service';
 import Tema from '../../../models/Tema';
 import useLocalStorage from 'react-use-localstorage';
 import { useSelector } from 'react-redux';
@@ -49,10 +49,11 @@ function DeletarTema() {
         function sim() {
             history.push('/tema')
             deleteId(`/tema/${id}`, {
-              headers: {
-                'Authorization': token
-              }
-            });
+                headers: {
+                    'Authorization': token
+                }
+            })
+        
             toast.success('Tema excluído.', {
                 position: 'top-right',
                 autoClose: 3000,
