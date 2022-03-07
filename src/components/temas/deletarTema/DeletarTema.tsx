@@ -5,7 +5,6 @@ import { useHistory, useParams } from 'react-router-dom';
 import { buscaId, deleteId } from '../../../service/Service';
 import Tema from '../../../models/Tema';
 import useLocalStorage from 'react-use-localstorage';
-import { useSelector } from 'react-redux';
 import { toast } from 'react-toastify';
 
 
@@ -80,7 +79,7 @@ function DeletarTema() {
                                 Deseja realmente deletar este tema?
                             </Typography>
                             <Typography color='textSecondary'>
-                                {tema?.descricao}
+                                {tema?.tema}
                             </Typography>
                         </Box>
                     </CardContent>
