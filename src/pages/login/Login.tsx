@@ -53,7 +53,7 @@ function Login() {
             });
         } catch (error) {
            
-            toast.error('Ops... Você digitou alguma informação incorreta ou ainda não é cadastrade! Mas não desista, tente novamente.', {
+            toast.error('Ops... Algo está errado. Verifique seu login e senha.', {
                 position: 'top-right',
                 autoClose: 3000,
                 hideProgressBar: false,
