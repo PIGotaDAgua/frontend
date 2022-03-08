@@ -23,10 +23,10 @@ function CadastroPost() {
         if (token === "") {
             toast.error("Opa! Para continuar, é preciso estar logado.", {
                 position: "top-right",
-                autoClose: 2000,
+                autoClose: 3000,
                 hideProgressBar: false,
                 closeOnClick: true,
-                pauseOnHover: false,
+                pauseOnHover: true,
                 draggable: false,
                 theme: "colored",
                 progress: undefined,
@@ -101,10 +101,10 @@ function CadastroPost() {
             })
             toast.success('Legal! Postagem atualizado !', {
                 position: "top-right",
-                autoClose: 2000,
+                autoClose: 3000,
                 hideProgressBar: false,
                 closeOnClick: true,
-                pauseOnHover: false,
+                pauseOnHover: true,
                 draggable: false,
                 theme: "colored",
                 progress: undefined,
@@ -117,10 +117,10 @@ function CadastroPost() {
             })
             toast.success('Pronto. Tema cadastrado ^.^!', {
                 position: "top-right",
-                autoClose: 2000,
+                autoClose: 3000,
                 hideProgressBar: false,
                 closeOnClick: true,
-                pauseOnHover: false,
+                pauseOnHover: true,
                 draggable: false,
                 theme: "colored",
                 progress: undefined,
