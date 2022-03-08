@@ -153,7 +153,7 @@ function CadastroPost() {
                         {
                             temas.map(tema => (
                                 <MenuItem value={tema.id}>
-                                    {tema.descricao}
+                                    {tema.tema}
                                 </MenuItem>
                             ))
                         }
