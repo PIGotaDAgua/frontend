@@ -1,20 +1,22 @@
 import React, { ChangeEvent, useEffect, useState } from 'react';
 import { Grid, Box, Typography, TextField, Button } from '@material-ui/core';
 import { Link, useHistory } from 'react-router-dom';
-import useLocalStorage from 'react-use-localstorage';
 import UserLogin from '../../models/UserLogin';
 import { login } from '../../service/Service';
-import './Login.css';
 import { toast } from 'react-toastify';
+import { useDispatch } from 'react-redux';
+import { addToken } from '../../store/tokens/actions';
+import './Login.css';
 
 function Login() {
 
     let history = useHistory();
-    const [token, setToken] = useLocalStorage('token');
+    const dispatch = useDispatch();
+    const [token, setToken] = useState('');
     const [userLogin, setUserLogin] = useState<UserLogin>(
         {
             id: 0,
-            usuario: '', // Valores iniciais do State.
+            usuario: '',
             senha: '',
             token: ''
         }
@@ -28,8 +30,8 @@ function Login() {
     }
 
     useEffect(() => {
-        // eslint-disable-next-line eqeqeq
         if (token != '') {
+            dispatch(addToken(token));
             history.push('/home')
         }
         // eslint-disable-next-line react-hooks/exhaustive-deps
@@ -40,7 +42,7 @@ function Login() {
         e.preventDefault();
         try {
             await login(`/usuario/logar`, userLogin, setToken)
-        
+
             toast.success('Você está conectado a nós!☺', {
                 position: 'top-right',
                 autoClose: 3000,
@@ -52,7 +54,7 @@ function Login() {
                 progress: undefined
             });
         } catch (error) {
-           
+
             toast.error('Ops... Algo está errado. Verifique seu login e senha.', {
                 position: 'top-right',
                 autoClose: 3000,
@@ -76,8 +78,8 @@ function Login() {
                 <Box paddingX={20}>
                     <form onSubmit={onSubmit}>
                         <Typography variant='h3' gutterBottom color='textPrimary' component='h3' align='center' style={{ fontWeight: 'bold' }} > Entrar </Typography>
-                        <TextField value={userLogin.usuario} onChange={(e: ChangeEvent<HTMLInputElement>) => updatedModel(e)} id='usuario' label='Usuário' variant='outlined' name='usuario' margin='normal' fullWidth required placeholder='email@email.com'/>
-                        <TextField value={userLogin.senha} onChange={(e: ChangeEvent<HTMLInputElement>) => updatedModel(e)}id='senha' label='Senha' variant='outlined' name='senha' margin='normal' type='password' fullWidth  required placeholder='minimo de 8 digitos'/>
+                        <TextField value={userLogin.usuario} onChange={(e: ChangeEvent<HTMLInputElement>) => updatedModel(e)} id='usuario' label='Usuário' variant='outlined' name='usuario' margin='normal' fullWidth required placeholder='email@email.com' />
+                        <TextField value={userLogin.senha} onChange={(e: ChangeEvent<HTMLInputElement>) => updatedModel(e)} id='senha' label='Senha' variant='outlined' name='senha' margin='normal' type='password' fullWidth required placeholder='minimo de 8 digitos' />
                         <Box marginTop={2} textAlign='center'>
                             <Button type='submit' variant='contained' color='primary'>
                                 Logar
@@ -94,8 +96,8 @@ function Login() {
                     </Box>
                 </Box>
             </Grid>
-            <Grid xs={6} className='logo' >
-
+            <Grid item xs={6} >
+                <img className="imagem" src='https://i.imgur.com/O0BGiXx.png' alt="" />
             </Grid>
         </Grid>
     );

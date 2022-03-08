@@ -1,17 +1,20 @@
 import React, { ChangeEvent, useEffect, useState } from "react";
 import { Container, Typography, TextField, Button } from '@material-ui/core';
-import './CadastroTema.css';
 import { useHistory, useParams } from "react-router-dom";
 import Tema from "../../../models/Tema";
 import { buscaId, post, put } from "../../../service/Service";
-import useLocalStorage from "react-use-localstorage";
 import { toast } from "react-toastify";
+import './CadastroTema.css';
+import { useSelector } from "react-redux";
+import { TokenState } from "../../../store/tokens/userReducer";
 
 
 function CadastroTema() {
     let history = useHistory();
     const { id } = useParams<{id: string}> ();
-    const [ token, setToken ] = useLocalStorage ('token');
+    const token = useSelector<TokenState, TokenState["tokens"]>(
+        (state)=> state.tokens
+        );
     const [tema, setTema] = useState<Tema>({
         id: 0,
         tema: "",

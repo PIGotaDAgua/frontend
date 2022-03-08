@@ -2,11 +2,10 @@
     font-weight: bold !important;
 }
 
-.logo {
-    background-image: url(https://i.imgur.com/Uap25qO.png) !important;
+.imagem {
     background-repeat: no-repeat;
     width: 100vh;
-    min-height: 100vh;
+    min-height: calc(120vh-35px);
     background-size: cover;
     background-position: center;
 }

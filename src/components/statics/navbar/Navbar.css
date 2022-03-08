@@ -4,22 +4,21 @@
 }
 
 .backgroundNav {
-    font-variant: small-caps;
-    color: aliceblue;
-    background-color: #16243f;
-    font-family: Arial, Helvetica, sans-serif;
-    text-decoration: none;
-    direction: center;
+    font-variant: small-caps !important;
+    color: #ffffff !important;
+    background-color: #7794e9 !important;
+    text-decoration: none !important;
+    direction: center !important;
 }
-.logo1{
-    width: 100px!important;
-    height: 50px!important;
+
+.logo1 {
+    width: 50px !important;
+    height: 50px !important;
     border-radius: 10px;
     margin: 2px;
 }
 
-.cursor{
+.cursor {
     cursor: pointer;
     color: #ffffff;
-    
 }

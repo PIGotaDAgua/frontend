@@ -1,17 +1,21 @@
 import React, { useEffect } from "react";
 import { Typography, Box, Button } from '@material-ui/core'
 import { Grid } from '@material-ui/core'
-import './Home.css';
-import { useHistory } from "react-router-dom";
-import useLocalStorage from "react-use-localstorage";
+import { Link, useHistory } from "react-router-dom";
 import { toast } from "react-toastify";
+import TabPostagem from "../../components/postagens/tabPostagem/TabPostagem";
+import ModalPostagem from "../../components/postagens/modalPostagem/ModalPostagem";
+import { useSelector } from "react-redux";
+import { TokenState } from "../../store/tokens/userReducer";
+import './Home.css';
 
 //Componentes, nada mais são que funções.
 function Home() {
 
     let history = useHistory();
-
-    const [ token, setToken ] = useLocalStorage ('token');
+    const token = useSelector<TokenState, TokenState["tokens"]>(
+        (state)=> state.tokens
+        );  
 
     useEffect(() => {
         if (token === '') {
@@ -38,16 +42,21 @@ function Home() {
                         <Typography variant="h6" gutterBottom color="textPrimary" component="h6" align="center" className="title">Conteúdos sobre como garantir a disponibilidade e a gestão sustentável da água potável e do saneamento para todos</Typography>
                     </Box>
                     <Box display="flex" justifyContent="center">
-                        <Box marginRight={1}></Box>
+                        <Box marginRight={1}>
+                            <ModalPostagem />
+                        </Box>
                         <br></br>
+                        <Link to='postagem'>
                         <Button variant="outlined" className="botton" > Ver Postagens</Button>
+                        </Link>
                     </Box>
-                        <br></br>
+                    <br></br>
                 </Grid>
                 <Grid item xs={6} >
-                    <img className="imagem" src="https://i.imgur.com/Uap25qO.png" alt="" />
+                    <img className="imagem" alt="" />
                 </Grid>
                 <Grid xs={12} className='posts'>
+                    <TabPostagem />
                 </Grid>
             </Grid>
         </>
