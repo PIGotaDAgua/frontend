@@ -89,9 +89,9 @@ function Login() {
                             <Typography variant='subtitle1' gutterBottom align='center'>Não tem uma conta?</Typography>
                         </Box>
                         <Link className='text-decorator-none' to={"/cadastrousuario"}>
-                            <Button variant='contained' color='secondary' className="btnCadastro">
-                                <Typography className='test' variant='subtitle1' align='center'>Cadastre-se</Typography>
-                            </Button>
+                            
+                                <Typography variant='subtitle1' gutterBottom align='center' className='textos1'>Cadastre-se</Typography>
+                            
                         </Link>
                     </Box>
                 </form>

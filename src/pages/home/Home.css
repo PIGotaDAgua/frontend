@@ -12,7 +12,8 @@
     border-color: #002e4f !important;
     background-color: #ffffff;
     color: #002e4f !important;
-    font-weight: bold !important
+    font-weight: bold !important;
+    text-decoration: none !important;
 }
 
 posts {
@@ -24,6 +25,8 @@ posts {
 }
 
 .container {
+    display: flex;
+    direction: initial;
     justify-content: 'center' !important;
     align-items: 'center' !important;
     padding: 100px;

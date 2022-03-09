@@ -3,7 +3,6 @@ import { Typography, Box, Button } from '@material-ui/core'
 import { Grid } from '@material-ui/core'
 import { Link, useHistory } from "react-router-dom";
 import { toast } from "react-toastify";
-import TabPostagem from "../../components/postagens/tabPostagem/TabPostagem";
 import ModalPostagem from "../../components/postagens/modalPostagem/ModalPostagem";
 import { useSelector } from "react-redux";
 import { TokenState } from "../../store/tokens/userReducer";
@@ -47,12 +46,12 @@ function Home() {
                         <Typography variant="h6" gutterBottom color="textPrimary" component="h6" align="center" className="title">Sua rede social de informações sobre água potável e saneamento.</Typography>
                     </Box>
                     <Box display="flex" justifyContent="center">
-                        <Box className="botton text-decorator-none" marginRight={1}>
+                        <Box className="botton" marginRight={1}>
                             <ModalPostagem />
                         </Box>
                         <br></br>
-                        <Link to='postagem'>
-                            <Button variant="outlined" className="botton text-decorator-none" > Ver Postagens </Button>
+                        <Link to='postagem' className='text-decorator-none'>
+                            <Button variant="outlined" className="botton" > Ver Postagens </Button>
                         </Link>
                     </Box>
                     <br></br>
