@@ -6,14 +6,14 @@
 .backgroundNav {
     font-variant: small-caps !important;
     color: #ffffff !important;
-    background-color: #7794e9 !important;
+    background-color: #042c4c !important;
     text-decoration: none !important;
     direction: center !important;
 }
 
 .logo1 {
-    width: 50px !important;
-    height: 50px !important;
+    width: 60px !important;
+    height: 60px !important;
     border-radius: 10px;
     margin: 2px;
 }
@@ -21,4 +21,8 @@
 .cursor {
     cursor: pointer;
     color: #ffffff;
+}
+
+.spaceLeft {
+    margin-left: auto!important;
 }

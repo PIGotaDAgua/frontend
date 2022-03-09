@@ -1,18 +1,27 @@
 .box1 {
-    background-color: #7794e9;
-    height: 120px;
+    background-color: #089fc0;
+    height: 90px;
 }
 
 .box2 {
-    background-color: #7794e9;
+    background-color: #089fc0;
     height: 60px;
 }
 
 .redes {
-    font-size: 60px !important;
+    font-size: 40px !important;
     color: #ffffff;
 }
 
 .textos {
-    color: #ffffff
+    color: #ffffff;
+    text-decoration-style: bold !important;
+}
+
+.hover:hover {
+    transform: scale(1.5);
+}
+
+.text-decorator-none {
+    text-decoration: none;
 }
