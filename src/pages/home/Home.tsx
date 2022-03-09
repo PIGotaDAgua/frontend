@@ -79,7 +79,7 @@ function Home() {
                         </CardActionArea>
                     </Card>
 
-                    <Card className='card' sx={{ maxWidth: 400 }}>
+                    <Card className='card' sx={{ maxWidth: 400}}>
                         <CardActionArea>
                             <CardMedia className="imageCard"
                                 component="img"
@@ -88,13 +88,15 @@ function Home() {
                                 alt="team"
                             />
                             <CardContent>
-                                <Typography gutterBottom variant="h5" component="div">
+                                <Link to='/about' className='text-decorator-none'>
+                                <Typography gutterBottom variant="h5" component="div" className='text'>
                                     Time de Desenvolvimento
                                 </Typography>
-                                <Typography variant="body2" color="inherit">
-                                    <p>Saiba quem faz parte equipe desenvolvedora desta Rede Social.</p>
+                                <Typography variant="body2" color="inherit" className='text'>
+                                    <p>Saiba quem faz parte da equipe desenvolvedora desta Rede Social.</p>
 
                                 </Typography>
+                                </Link>
                             </CardContent>
                         </CardActionArea>
                     </Card>

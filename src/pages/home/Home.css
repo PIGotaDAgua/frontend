@@ -35,3 +35,7 @@ posts {
 .card {
     margin: 10px;
 }
+
+.text {
+    color: #000000 !important;
+}
