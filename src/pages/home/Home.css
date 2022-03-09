@@ -33,5 +33,13 @@ posts {
 }
 
 .card {
-    margin: 10px;
+    margin: 10px !important;
+    height: 300px !important;
+    width: 800px !important;
+}
+
+.hr {
+    border: 1px solid #002e4f;
+    border-radius: 5px;
+    width: 90%;
 }

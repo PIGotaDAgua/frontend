@@ -59,6 +59,7 @@ function Home() {
                 <Grid item xs={6} >
                     <img src="https://i.imgur.com/DbFlrkb.gif" alt="" width="100%" height="100%" />
                 </Grid>
+                <hr className="hr"/>
                 <Grid className='container' xs={12}>
                     <Card className='card' sx={{ maxWidth: 400 }}>
                         <CardActionArea>
@@ -70,10 +71,10 @@ function Home() {
                             />
                             <CardContent>
                                 <Typography gutterBottom variant="h5" component="div">
-                                    ODS 6 - Objetivos de Desenvolvimento Sustentável
+                                     ODS 6
                                 </Typography>
                                 <Typography variant="body2" color="inherit">
-                                    <p>A água e o saneamento básico são recursos vitais e direitos humanos, cujos acessos são essenciais para a saúde, sustentabilidade ambiental e prosperidade econômica. A extrema importância da água e do saneamento levou ao sexto objetivo dos ODS. Saiba onde encontrar mais informações.</p>
+                                    <p>Conheça o que é e saiba onde encontrar informações sobre a ODS 6 da ONU, relacionada a água potável e saneamento básico.</p>
                                 </Typography>
                             </CardContent>
                         </CardActionArea>
@@ -81,6 +82,7 @@ function Home() {
 
                     <Card className='card' sx={{ maxWidth: 400 }}>
                         <CardActionArea>
+                            <Link to='/about' className="text-decorator-none title">
                             <CardMedia className="imageCard"
                                 component="img"
                                 height="140"
@@ -96,6 +98,7 @@ function Home() {
 
                                 </Typography>
                             </CardContent>
+                            </Link>
                         </CardActionArea>
                     </Card>
 
