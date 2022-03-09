@@ -73,32 +73,27 @@ function Login() {
 
     return (
 
-        <Grid container direction="row" justifyContent='center' alignItems='center'>
-            <Grid alignItems='center' xs={6}>
-                <Box paddingX={20}>
-                    <form onSubmit={onSubmit}>
-                        <Typography variant='h3' gutterBottom color='textPrimary' component='h3' align='center' style={{ fontWeight: 'bold' }} > Entrar </Typography>
-                        <TextField value={userLogin.usuario} onChange={(e: ChangeEvent<HTMLInputElement>) => updatedModel(e)} id='usuario' label='Usuário' variant='outlined' name='usuario' margin='normal' fullWidth required placeholder='email@email.com' />
-                        <TextField value={userLogin.senha} onChange={(e: ChangeEvent<HTMLInputElement>) => updatedModel(e)} id='senha' label='Senha' variant='outlined' name='senha' margin='normal' type='password' fullWidth required placeholder='minimo de 8 digitos' />
-                        <Box marginTop={2} textAlign='center'>
-                            <Button type='submit' variant='contained' color='primary'>
-                                Logar
-                            </Button>
-                        </Box>
-                    </form>
-                    <Box display='flex' justifyContent='center' marginTop={2}>
-                        <Box marginRight={1}>
-                            <Typography variant='subtitle1' gutterBottom align='center'>Não tem uma conta?</Typography>
-                        </Box>
-                        <Link to={"/cadastrousuario"}>
-                            <Typography variant='subtitle1' gutterBottom align='center' className='textos1'>Cadastre-se</Typography>
-                        </Link>
+        <Grid className='spaceTop formsLogin' container direction="row" justifyContent='center' alignItems='center'>
+            <Box paddingX={20}>
+                <form onSubmit={onSubmit}>
+                    <Typography variant='h3' gutterBottom color='textPrimary' component='h3' align='center' style={{ fontWeight: 'bold' }} > Entrar </Typography>
+                    <TextField value={userLogin.usuario} onChange={(e: ChangeEvent<HTMLInputElement>) => updatedModel(e)} id='usuario' label='Usuário' variant='outlined' name='usuario' margin='normal' fullWidth required placeholder='email@email.com' />
+                    <TextField value={userLogin.senha} onChange={(e: ChangeEvent<HTMLInputElement>) => updatedModel(e)} id='senha' label='Senha' variant='outlined' name='senha' margin='normal' type='password' fullWidth required placeholder='Insira a senha com no mínimo de 8 digitos' />
+                    <Box marginTop={2} textAlign='center'>
+                        <Button type='submit' variant='contained' color='primary'>
+                            Logar
+                        </Button>
                     </Box>
+                </form>
+                <Box display='flex' justifyContent='center' marginTop={2}>
+                    <Box marginRight={1}>
+                        <Typography variant='subtitle1' gutterBottom align='center'>Não tem uma conta?</Typography>
+                    </Box>
+                    <Link to={"/cadastrousuario"}>
+                        <Typography variant='subtitle1' gutterBottom align='center' className='textos1'>Cadastre-se</Typography>
+                    </Link>
                 </Box>
-            </Grid>
-            <Grid item xs={6} >
-                <img className="imagem" src='https://i.imgur.com/O0BGiXx.png' alt="" />
-            </Grid>
+            </Box>
         </Grid>
     );
 }

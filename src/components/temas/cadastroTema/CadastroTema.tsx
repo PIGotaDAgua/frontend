@@ -107,10 +107,10 @@ function CadastroTema() {
         <Container maxWidth='sm' className='topo'>
             <form onSubmit={onSubmit}>
                 <Typography variant='h3' color ='textSecondary' component='h1' align='center'>
-                    Formulário para cadastro de tema
+                    Crie ou atualize um tema selecionado:
                 </Typography>
-                <TextField value={tema.tema} onChange={(e: ChangeEvent<HTMLInputElement>) => updateTema(e)} id='tema' label='tema' variant='outlined' name='tema' margin='normal' fullWidth />
-                <TextField value={tema.descricao} onChange={(e: ChangeEvent<HTMLInputElement>) => updateTema(e)} id='descricao' label='descricao' variant='outlined' name='descricao' margin='normal' fullWidth />
+                <TextField value={tema.tema} onChange={(e: ChangeEvent<HTMLInputElement>) => updateTema(e)} id='tema' label='Tema' variant='outlined' name='tema' margin='normal' fullWidth />
+                <TextField value={tema.descricao} onChange={(e: ChangeEvent<HTMLInputElement>) => updateTema(e)} id='descricao' label='Descrição' variant='outlined' name='descricao' margin='normal' fullWidth />
                 <Button type='submit' variant='contained' color='primary' className='btF'>
                     Finalizar
                 </Button>

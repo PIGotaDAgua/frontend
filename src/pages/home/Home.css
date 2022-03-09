@@ -4,13 +4,13 @@
 }
 
 .title {
-    color: black !important;
+    color: #002e4f !important;
     font-weight: bold !important
 }
 
 .botton {
     border-color: #002e4f !important;
-    background-color: #E0FFFF;
+    background-color: #ffffff;
     color: #002e4f !important;
     font-weight: bold !important
 }
@@ -21,14 +21,4 @@ posts {
 
 .text-decorator-none {
     text-decoration: none !important;
-    color: #ffffff !important;
-}
-
-.imagem {
-    background-image: url(https://i.imgur.com/O0BGiXx.png) !important;
-    background-repeat: no-repeat;
-    width: 100vh;
-    min-height: calc(120vh-35px);
-    background-size: cover;
-    background-position: center;
 }
