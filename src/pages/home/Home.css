@@ -1,6 +1,6 @@
 .box {
     background-color: #ffffff;
-    ;
+    display: flex !important;
 }
 
 .title {
@@ -21,4 +21,14 @@ posts {
 
 .text-decorator-none {
     text-decoration: none !important;
+}
+
+.container {
+    justify-content: 'center' !important;
+    align-items: 'center' !important;
+    padding: 100px;
+}
+
+.card {
+    margin: 10px;
 }
