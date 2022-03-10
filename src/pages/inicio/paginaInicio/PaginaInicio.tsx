@@ -59,9 +59,9 @@ function PaginaInicio() {
                 <Carousel />
             </Grid>
 
-            {/* <Grid>
+             {/* <Grid>
                 <About />
-            </Grid> */}
+            </Grid>  */}
 
             <Grid container direction="row" justifyContent="center" alignItems='center'>
                 <Grid alignItems="center" item xs={12}>
