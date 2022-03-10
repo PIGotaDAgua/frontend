@@ -9,7 +9,7 @@ function Contact() {
             <Grid alignItems='center' xs={6}>
                 <Box paddingX={20}>
                     <form>
-                        <Typography variant='h3' gutterBottom color='textPrimary' component='h3' align='center' style={{ fontWeight: 'bold' }} > Fale com a gente </Typography>
+                        <Typography variant='h4' gutterBottom color='textPrimary' component='h4' align='center' style={{ fontWeight: 'bold' }} > Fale com a gente </Typography>
                         <TextField id='nomeCompleto' label='Nome completo' variant='outlined' name='nomeCompleto' margin='normal' fullWidth />
                         <TextField id='email' label='E-mail' variant='outlined' name='email' margin='normal' type='email' fullWidth />
                         <TextField id='usuario' label='Nome completo' variant='outlined' name='email' margin='normal' fullWidth />
