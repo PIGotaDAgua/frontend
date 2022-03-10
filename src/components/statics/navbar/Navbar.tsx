@@ -95,7 +95,7 @@ function Navbar() {
 
                             </Box>
                         </Link>
-                        <Link to='/login' className='text-decorator-none'>
+                        <Link to='/' className='text-decorator-none'>
                             <Box mx={1} className='cursor backgroundNav' onClick={goLogout}>
                                 <Typography variant="h6" >
                                     Logout

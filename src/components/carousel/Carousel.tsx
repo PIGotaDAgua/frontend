@@ -5,7 +5,7 @@ import ArrowBackIosIcon from '@material-ui/icons/ArrowBackIos';
 import ArrowForwardIosIcon from '@material-ui/icons/ArrowForwardIos';
 
 function Carousel() {
-    const [currImg, setCurrImg] = useState(2);
+    const [currImg, setCurrImg] = useState(0);
 
 
     return (
