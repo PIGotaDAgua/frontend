@@ -32,7 +32,8 @@ function Navbar() {
     var navbarComponent;
 
     if (token != '') {
-        navbarComponent = <AppBar position="static">
+        navbarComponent = 
+        <AppBar position="static">
             <Toolbar variant="dense" className='backgroundNav'>
                 <Box className='cursor'>
                     <img className='logo1' src='https://i.imgur.com/cKPeZ1C.png' alt="logo" />
