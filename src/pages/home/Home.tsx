@@ -43,7 +43,7 @@ function Home() {
                 <Grid alignItems="center" item xs={6}>
                     <Box paddingX={20} >
                         <Typography variant="h4" gutterBottom color="textPrimary" component="h4" align="center" className="title" >Bem vinde a Gota d'água</Typography>
-                        <Typography variant="h6" gutterBottom color="textPrimary" component="h6" align="center" className="title">Sua rede social de informações sobre água potável e saneamento.</Typography>
+                        <Typography variant="h6" gutterBottom color="textPrimary" component="h6" align="center" className="title">Uma rede para ajudar a alcançar a ODS  (Objetivo de Desenvolvimento Sustentável) 6 da ONU.</Typography>
                     </Box>
                     <Box display="flex" justifyContent="center">
                         <Box className="botton" marginRight={1}>
