@@ -98,7 +98,7 @@ function CadastroPost() {
                     'Authorization': token
                 }
             })
-            toast.success('Legal! Postagem atualizado !', {
+            toast.success('Legal! Postagem atualizada !', {
                 position: "top-right",
                 autoClose: 3000,
                 hideProgressBar: false,
@@ -114,7 +114,7 @@ function CadastroPost() {
                     'Authorization': token
                 }
             })
-            toast.success('Pronto. Tema cadastrado ^.^!', {
+            toast.success('Pronto. Postagem realizada ^.^!', {
                 position: "top-right",
                 autoClose: 3000,
                 hideProgressBar: false,

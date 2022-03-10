@@ -10,11 +10,11 @@ function About() {
     return (
         <Grid container direction="column" justifyContent='center' alignItems='center'>
             <Grid className='titulo' alignItems='center' xs={12}>
-                <h1> 💧 Conheça a equipe desenvolvedora Gota d'água:  </h1>
+                <h1> 💧 Conheça a equipe desenvolvedora Gota d'Água 💧 </h1>
             </Grid>
             <Grid container direction="row" alignItems='center' xs={12}>
                 <Card className='cardAbout' sx={{ maxWidth: 300 }}>
-                    <CardActionArea href='https://github.com/danielpramos'>
+                    <CardActionArea href='https://github.com/danielpramos'  target='_blank'>
                         <CardMedia className="imageCard"
                             component="img"
                             height="300"
@@ -33,7 +33,7 @@ function About() {
                 </Card>
 
                 <Card className='cardAbout' sx={{ maxWidth: 300 }}>
-                    <CardActionArea href='https://github.com/gustavocardoso8'>
+                    <CardActionArea href='https://github.com/gustavocardoso8' target='_blank'>
                         <CardMedia className="imageCard"
                             component="img"
                             height="300"
@@ -45,7 +45,7 @@ function About() {
                                 Gustavo Cardoso
                             </Typography>
                             <Typography variant="body2" color="inherit">
-                                <p> Mussum Ipsum, cacilds vidis litro abertis. Quem num gosta di mé, boa gentis num é.Cevadis im ampola pa arma uma pindureta.Pra lá , depois divoltis porris, paradis.In elementis mé pra quem é amistosis quis leo.
+                                <p> Com 25 anos, resido em São Bernardo do Campo, SP. Sou apaixonado por tecnologia desde a infância, porém sem dinheiro para os estudos acabei descobrindo uma segunda paixão: ajudar pessoas, e me formei na área da saúde. Hoje, finalmente tendo as primeiras oportunidades, estou formado como Pessoa Desenvolvedora Fullstack Java Jr. pela Generation Brasil, além de estudar Ciência da Computação.
                                 </p>
                             </Typography>
                         </CardContent>
@@ -53,7 +53,7 @@ function About() {
                 </Card>
 
                 <Card className='cardAbout' sx={{ maxWidth: 300 }}>
-                    <CardActionArea href='https://github.com/Maaahzin'>
+                    <CardActionArea href='https://github.com/Maaahzin'  target='_blank' >
                         <CardMedia className="imageCard"
                             component="img"
                             height="mari"
@@ -75,7 +75,7 @@ function About() {
                 </Card>
 
                 <Card className='cardAbout' sx={{ maxWidth: 300 }}>
-                    <CardActionArea href='https://github.com/nancidama'>
+                    <CardActionArea href='https://github.com/nancidama'  target='_blank'>
                         <CardMedia className="imageCard"
                             component="img"
                             height="300"
@@ -94,7 +94,7 @@ function About() {
                 </Card>
 
                 <Card className='cardAbout' sx={{ maxWidth: 300 }}>
-                    <CardActionArea href='https://github.com/rafacruzz'>
+                    <CardActionArea href='https://github.com/rafacruzz'  target='_blank'>
                         <CardMedia className="imageCard"
                             component="img"
                             height="300"

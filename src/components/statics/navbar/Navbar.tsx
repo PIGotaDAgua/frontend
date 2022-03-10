@@ -34,9 +34,11 @@ function Navbar() {
     if (token != '') {
         navbarComponent = <AppBar position="static">
             <Toolbar variant="dense" className='backgroundNav'>
+            <Link to='/home'>
                 <Box className='cursor'>
                     <img className='logo1' src='https://i.imgur.com/cKPeZ1C.png' alt="logo" />
                 </Box>
+                </Link>
                 <Box className="spaceLeft" display="flex" justifyContent={'right'}>
                     <Box display="flex" justifyContent="start">
                         <Link to='/home' className='text-decorator-none'>

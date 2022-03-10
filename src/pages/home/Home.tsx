@@ -62,7 +62,7 @@ function Home() {
                 <hr className="hr"/>
                 <Grid className='container' xs={12}>
                     <Card className='card' sx={{ maxWidth: 400 }}>
-                        <CardActionArea>
+                        <CardActionArea href='https://brasil.un.org/pt-br/sdgs' target='_blank'>
                             <CardMedia className="imageCard"
                                 component="img"
                                 height="140"
@@ -104,6 +104,7 @@ function Home() {
 
                     <Card className='card' sx={{ maxWidth: 400 }}>
                         <CardActionArea>
+                            <Link to='/descubra' className="text-decorator-none title">
                             <CardMedia className="imageCard"
                                 component="img"
                                 height="140"
@@ -119,6 +120,7 @@ function Home() {
 
                                 </Typography>
                             </CardContent>
+                            </Link>
                         </CardActionArea>
                     </Card>
 
