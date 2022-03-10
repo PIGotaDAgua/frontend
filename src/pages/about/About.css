@@ -1,3 +1,17 @@
-.imagem {
-    background-image: url(https://i.imgur.com/O0BGiXx.png)
+.cardAbout {
+    margin: 1.9px !important;
+    height: 600px !important;
+    width: 800px !important;
+}
+
+.container {
+    display: flex;
+    direction: initial;
+    justify-content: 'center' !important;
+    align-items: 'center' !important;
+    padding: 100px;
+}
+
+.titulo {
+    color: #002e4f;
 }

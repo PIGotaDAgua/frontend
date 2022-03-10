@@ -44,8 +44,8 @@ function Footer() {
                         <Typography variant="subtitle2" gutterBottom className='textos' align="center"> Gota D'água: All Rights Reserved © 2022</Typography>
                     </Box>
                     <Box>
-                        <a href='https://brasil.generation.org' target="_blank" rel="noreferrer">
-                            <Typography variant="subtitle2" gutterBottom className='textos text-decorator-none' align="center">brasil.generation.org</Typography>
+                        <a className='text-decorator-none' href='https://brasil.generation.org' target="_blank" rel="noreferrer">
+                            <Typography variant="subtitle2" gutterBottom className='textos' align="center">brasil.generation.org</Typography>
                         </a>
                     </Box>
                 </Box>

@@ -1,6 +1,6 @@
 .box {
     background-color: #ffffff;
-    ;
+    display: flex !important;
 }
 
 .title {
@@ -12,7 +12,8 @@
     border-color: #002e4f !important;
     background-color: #ffffff;
     color: #002e4f !important;
-    font-weight: bold !important
+    font-weight: bold !important;
+    text-decoration: none !important;
 }
 
 posts {
@@ -21,4 +22,24 @@ posts {
 
 .text-decorator-none {
     text-decoration: none !important;
+}
+
+.container {
+    display: flex;
+    direction: initial;
+    justify-content: 'center' !important;
+    align-items: 'center' !important;
+    padding: 100px;
+}
+
+.card {
+    margin: 10px !important;
+    height: 300px !important;
+    width: 800px !important;
+}
+
+.hr {
+    border: 1px solid #002e4f;
+    border-radius: 5px;
+    width: 90%;
 }
