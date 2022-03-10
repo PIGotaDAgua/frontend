@@ -32,7 +32,8 @@ function Navbar() {
     var navbarComponent;
 
     if (token != '') {
-        navbarComponent = <AppBar position="static">
+        navbarComponent = 
+        <AppBar position="static">
             <Toolbar variant="dense" className='backgroundNav'>
             <Link to='/home'>
                 <Box className='cursor'>
@@ -96,7 +97,7 @@ function Navbar() {
 
                             </Box>
                         </Link>
-                        <Link to='/login' className='text-decorator-none'>
+                        <Link to='/' className='text-decorator-none'>
                             <Box mx={1} className='cursor backgroundNav' onClick={goLogout}>
                                 <Typography variant="h6" >
                                     Logout

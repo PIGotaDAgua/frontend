@@ -1,0 +1,40 @@
+body{
+    padding: 0;
+    margin: 0;
+  }
+
+.extremo{
+    justify-content: space-between!important;
+    width: 100vw;
+    
+}
+
+.logo1 {
+    width: 60px !important;
+    height: 60px !important;
+    border-radius: 10px;
+    margin: 2px;
+}
+.logo2{
+    background-image: url('../../../components/carousel/images/agua1gif.gif');
+
+    /* /* background texto com Imagem gif */
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+.nav{
+    width: 100vw;
+    height: 10vh;
+}
+.AppC{
+    width: 100vw;
+    height: 90vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #add8e6;
+  }
+  .footerInicio{
+    background-color: #089fc0;
+  }
