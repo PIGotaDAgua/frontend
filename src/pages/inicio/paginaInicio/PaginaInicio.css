@@ -22,6 +22,7 @@ body{
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     
+    
 }
 .fonteLogo{
   font-weight: bold!important;
@@ -29,6 +30,8 @@ body{
 .nav{
     width: 100vw;
     height: 10vh;
+    background-color: #042c4c!important;
+    
 }
 .navPaddingInicio{
   border-radius: 10px;

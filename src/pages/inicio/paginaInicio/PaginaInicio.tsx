@@ -7,7 +7,7 @@ import YouTubeIcon from '@material-ui/icons/YouTube';
 import LinkedInIcon from '@material-ui/icons/LinkedIn';
 import GitHubIcon from '@material-ui/icons/GitHub';
 import EmailIcon from '@material-ui/icons/Email';
-import About from "../../about/About";
+// import About from "../../about/About";
 
 
 
@@ -24,7 +24,7 @@ function PaginaInicio() {
 
                             <Box className="logo2">
                                 <Typography className="fonteLogo" variant="h5" color="inherit">
-                                    GotaDÁgua
+                                    Gota d'Água
                                 </Typography>
                             </Box>
                         </Box>
@@ -59,9 +59,9 @@ function PaginaInicio() {
                 <Carousel />
             </Grid>
 
-             <Grid>
+             {/* <Grid>
                 <About />
-            </Grid> 
+            </Grid>  */}
 
             <Grid container direction="row" justifyContent="center" alignItems='center'>
                 <Grid alignItems="center" item xs={12}>

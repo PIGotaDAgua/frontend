@@ -49,8 +49,8 @@
 }
 .subtitleP{
     font-size: 2rem;
-    -webkit-text-stroke-width: 0.5px; /* largura da borda*/ 
-    -webkit-text-stroke-color: #000; /* cor da borda */
+    -webkit-text-stroke-width: 1px; /* largura da borda*/ 
+    -webkit-text-stroke-color: #042c4c; /* cor da borda */
 }
 .titleH1, .subtitleP{
     background-color: rgb(255, 255, 255, 0);

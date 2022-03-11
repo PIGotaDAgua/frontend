@@ -65,7 +65,7 @@ function About() {
                                 Mariana Souza
                             </Typography>
                             <Typography variant="body2" color="inherit">
-                                <p> Me chamo Mariana Costa de Souza, tenho 30 anos, resido em São Bernardo.
+                                <p> Tenho 30 anos, resido em São Bernardo.
                                     Sou Desenvolvedora Java Full Stack Jr. e estou em transição de carreira para área Tech.
                                     Tenho inglês básico.
                                 </p>
@@ -87,7 +87,7 @@ function About() {
                                 Nanci Damasceno
                             </Typography>
                             <Typography variant="body2" color="inherit">
-                                <p> Meu nome é Nanci, tenho 27 anos, sou casada e resido em Cotia-SP. Minha vida sempre foi dividida por 3 coisas que amo muito que é a moda, cantar e tecnologia. Atualmente trabalho na organização Sumup e sou formada pela Generation Brasil em Desenvolvedora Full Stack Java Jr.</p>
+                                <p> Tenho 27 anos, sou casada e resido em Cotia-SP. Minha vida sempre foi dividida por 3 coisas que amo muito que é a moda, cantar e tecnologia. Atualmente trabalho na organização Sumup e sou formada pela Generation Brasil em Desenvolvedora Full Stack Java Jr.</p>
                             </Typography>
                         </CardContent>
                     </CardActionArea>
