@@ -73,16 +73,28 @@ function Login() {
 
     return (
 
-        <Grid className='spaceTop background' container direction="row" justifyContent='center' alignItems='center'>
+        <Grid className='spaceTop backgroundLogin' container direction="row" justifyContent='center' alignItems='center'>
             <Box paddingX={20}>
                 <form className='formsLogin' onSubmit={onSubmit}>
                     <Typography variant='h3' gutterBottom color='textPrimary' component='h3' align='center' style={{ fontWeight: 'bold' }} > Entrar </Typography>
                     <TextField value={userLogin.usuario} onChange={(e: ChangeEvent<HTMLInputElement>) => updatedModel(e)} id='usuario' label='Usuário' variant='outlined' name='usuario' margin='normal' fullWidth required placeholder='email@email.com' />
                     <TextField value={userLogin.senha} onChange={(e: ChangeEvent<HTMLInputElement>) => updatedModel(e)} id='senha' label='Senha' variant='outlined' name='senha' margin='normal' type='password' fullWidth required placeholder='Insira a senha com no mínimo de 8 digitos' />
-                    <Box marginTop={2} textAlign='center'>
-                        <Button type='submit' variant='contained' color='primary'>
-                            Logar
-                        </Button>
+
+                    <Box display="flex" justifyContent="center">
+                        <Link className= "text-decorator-none" to='/'>
+                            <Box marginTop={2} textAlign='center'>
+                                <Button className='btnSpace' type='submit' variant='contained' color='primary'>
+                                    Voltar
+                                </Button>
+                            </Box>
+                        </ Link>
+
+                        <Box marginTop={2} textAlign='center'>
+                            <Button type='submit' variant='contained' color='primary'>
+                                Logar
+                            </Button>
+                        </Box>
+
                     </Box>
                     <Box display='flex' justifyContent='center' alignItems='center' marginTop={2}>
                         <Box marginRight={1}>

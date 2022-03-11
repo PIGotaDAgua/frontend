@@ -87,7 +87,7 @@ function CadastroUsuario() {
         }
     }
     return (
-        <Box display='flex' className='container background'>
+        <Box display='flex' className='container backgroundCadastro'>
             <Grid className='fundo' item xs={12}>
                 <Box display='flex' justifyContent={'center'} paddingX={10}>
                     <form className='formsCadastro' onSubmit={onSubmit}  >

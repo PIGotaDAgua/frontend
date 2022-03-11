@@ -19,6 +19,7 @@ import DeletarPostagem from './components/postagens/deletarPostagem/DeletarPosta
 import { Provider } from 'react-redux';
 import store from './store/store';
 import './App.css';
+import PaginaInicio from './pages/inicio/paginaInicio/PaginaInicio';
 
 function App() {
   return (
@@ -28,8 +29,8 @@ function App() {
         <Navbar />
         <Switch>
           <div style={{ minHeight: '100vh' }}>
-            <Route exact path='/'>
-              <Login />
+          <Route exact path='/'>
+              <PaginaInicio />
             </Route>
             <Route path='/login'>
               <Login />

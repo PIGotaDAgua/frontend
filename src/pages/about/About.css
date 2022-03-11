@@ -1,5 +1,5 @@
 .cardAbout {
-    margin: 1.9px !important;
+    margin: 30px !important;
     height: 600px !important;
     width: 100% !important;
 }
@@ -14,4 +14,8 @@
 
 .titulo {
     color: #002e4f;
+}
+.aboutH1{
+    font-size: 50px!important;
+    padding: 40px;
 }

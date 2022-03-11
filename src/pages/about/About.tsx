@@ -10,9 +10,9 @@ function About() {
     return (
         <Grid container direction="column" justifyContent='center' alignItems='center'>
             <Grid className='titulo' alignItems='center' xs={12}>
-                <h1> 💧 Conheça a equipe desenvolvedora Gota d'Água 💧 </h1>
+                <h1 className='aboutH1'> 💧 Conheça a equipe desenvolvedora Gota d'Água 💧 </h1>
             </Grid>
-            <Grid container direction="row" alignItems='center' xs={12}>
+            <Grid container direction="row" alignItems='center' justifyContent='center' xs={12}>
                 <Card className='cardAbout' sx={{ maxWidth: 300 }}>
                     <CardActionArea href='https://github.com/danielpramos'  target='_blank'>
                         <CardMedia className="imageCard"
