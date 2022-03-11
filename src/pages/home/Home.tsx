@@ -59,9 +59,11 @@ function Home() {
                 <Grid item xs={6} >
                     <img src="https://i.imgur.com/DbFlrkb.gif" alt="" width="100%" height="100%" />
                 </Grid>
-                <hr className="hr"/>
+
+                <hr className="hr" />
+
                 <Grid className='container' xs={12}>
-                    <Card className='card' sx={{ maxWidth: 400 }}>
+                    <Card className='cardHome' sx={{ maxWidth: 400 }}>
                         <CardActionArea href='https://brasil.un.org/pt-br/sdgs' target='_blank'>
                             <CardMedia className="imageCard"
                                 component="img"
@@ -71,7 +73,7 @@ function Home() {
                             />
                             <CardContent>
                                 <Typography gutterBottom variant="h5" component="div">
-                                     ODS 6
+                                    ODS 6
                                 </Typography>
                                 <Typography variant="body2" color="inherit">
                                     <p>Conheça o que é e saiba onde encontrar informações sobre a ODS 6 da ONU, relacionada a água potável e saneamento básico.</p>
@@ -80,46 +82,45 @@ function Home() {
                         </CardActionArea>
                     </Card>
 
-                    <Card className='card' sx={{ maxWidth: 400 }}>
+                    <Card className='cardHome' sx={{ maxWidth: 400 }}>
                         <CardActionArea>
                             <Link to='/about' className="text-decorator-none title">
-                            <CardMedia className="imageCard"
-                                component="img"
-                                height="140"
-                                image="https://i.imgur.com/7dfIeRb.png"
-                                alt="team"
-                            />
-                            <CardContent>
-                                <Typography gutterBottom variant="h5" component="div">
-                                    Time de Desenvolvimento
-                                </Typography>
-                                <Typography variant="body2" color="inherit">
-                                    <p>Saiba quem faz parte equipe desenvolvedora desta Rede Social.</p>
-
-                                </Typography>
-                            </CardContent>
+                                <CardMedia className="imageCard"
+                                    component="img"
+                                    height="140"
+                                    image="https://i.imgur.com/7dfIeRb.png"
+                                    alt="team"
+                                />
+                                <CardContent>
+                                    <Typography gutterBottom variant="h5" component="div">
+                                        Time de Desenvolvimento
+                                    </Typography>
+                                    <Typography variant="body2" color="inherit">
+                                        <p>Saiba quem faz parte equipe desenvolvedora desta Rede Social.</p>
+                                    </Typography>
+                                </CardContent>
                             </Link>
                         </CardActionArea>
                     </Card>
 
-                    <Card className='card' sx={{ maxWidth: 400 }}>
+                    <Card className='cardHome' sx={{ maxWidth: 400 }}>
                         <CardActionArea>
                             <Link to='/descubra' className="text-decorator-none title">
-                            <CardMedia className="imageCard"
-                                component="img"
-                                height="140"
-                                image="https://i.imgur.com/Qp1uraV.png"
-                                alt="agua"
-                            />
-                            <CardContent>
-                                <Typography gutterBottom variant="h5" component="div">
-                                    Rede de Apoio
-                                </Typography>
-                                <Typography variant="body2" color="inherit">
-                                    <p>Encontre pessoas que apoiam a causa e meios de ajudar com ações, ou até mesmo trabalhos voluntários.</p>
+                                <CardMedia className="imageCard"
+                                    component="img"
+                                    height="140"
+                                    image="https://i.imgur.com/Qp1uraV.png"
+                                    alt="agua"
+                                />
+                                <CardContent>
+                                    <Typography gutterBottom variant="h5" component="div">
+                                        Rede de Apoio
+                                    </Typography>
+                                    <Typography variant="body2" color="inherit">
+                                        <p>Encontre pessoas que apoiam a causa e meios de ajudar com ações, ou até mesmo trabalhos voluntários.</p>
 
-                                </Typography>
-                            </CardContent>
+                                    </Typography>
+                                </CardContent>
                             </Link>
                         </CardActionArea>
                     </Card>

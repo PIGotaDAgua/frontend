@@ -7,7 +7,7 @@ import YouTubeIcon from '@material-ui/icons/YouTube';
 import LinkedInIcon from '@material-ui/icons/LinkedIn';
 import GitHubIcon from '@material-ui/icons/GitHub';
 import EmailIcon from '@material-ui/icons/Email';
-// import About from "../../about/About";
+import About from "../../about/About";
 
 
 
@@ -23,7 +23,7 @@ function PaginaInicio() {
                             </Box>
 
                             <Box className="logo2">
-                                <Typography variant="h6" color="inherit">
+                                <Typography className="fonteLogo" variant="h5" color="inherit">
                                     GotaDÁgua
                                 </Typography>
                             </Box>
@@ -31,20 +31,20 @@ function PaginaInicio() {
 
                         <Box display="flex" justifyContent="start" alignItems="center" >
 
-                            <Link to='/cadastrousuario' className='text-decorator-none navSpaceLeft navPadding'>
+                            <Link to='/cadastrousuario' className='text-decorator-none navPaddingInicio'>
                                 <Box display="flex" justifyContent="center">
-                                    <Box className="navPadding:hover cursor" mx={1} >
-                                        <Typography variant="h6" color="inherit">
+                                    <Box className="navPaddingInicio:hover cursor" mx={1} >
+                                        <Typography className="corLetra" variant="h6" color="inherit">
                                             Cadastre-se
                                         </Typography>
                                     </Box>
                                 </Box>
                             </Link>
 
-                            <Link to='/login' className='text-decorator-none navSpaceLeft navPadding'>
+                            <Link to='/login' className='text-decorator-none navPaddingInicio'>
                                 <Box display="flex" justifyContent="center">
                                     <Box className="navPadding:hover cursor" mx={1} >
-                                        <Typography variant="h6" color="inherit">
+                                        <Typography className="corLetra" variant="h6" color="inherit">
                                             Login
                                         </Typography>
                                     </Box>
@@ -59,9 +59,9 @@ function PaginaInicio() {
                 <Carousel />
             </Grid>
 
-             {/* <Grid>
+             <Grid>
                 <About />
-            </Grid>  */}
+            </Grid> 
 
             <Grid container direction="row" justifyContent="center" alignItems='center'>
                 <Grid alignItems="center" item xs={12}>

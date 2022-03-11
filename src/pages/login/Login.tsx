@@ -73,7 +73,7 @@ function Login() {
 
     return (
 
-        <Grid className='spaceTop background' container direction="row" justifyContent='center' alignItems='center'>
+        <Grid className='spaceTop backgroundLogin' container direction="row" justifyContent='center' alignItems='center'>
             <Box paddingX={20}>
                 <form className='formsLogin' onSubmit={onSubmit}>
                     <Typography variant='h3' gutterBottom color='textPrimary' component='h3' align='center' style={{ fontWeight: 'bold' }} > Entrar </Typography>
@@ -83,7 +83,7 @@ function Login() {
                     <Box display="flex" justifyContent="center">
                         <Link className= "text-decorator-none" to='/'>
                             <Box marginTop={2} textAlign='center'>
-                                <Button type='submit' variant='contained' color='primary'>
+                                <Button className='btnSpace' type='submit' variant='contained' color='primary'>
                                     Voltar
                                 </Button>
                             </Box>

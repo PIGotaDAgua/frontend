@@ -92,15 +92,15 @@ function Navbar() {
 
                             <Box mx={1} className='cursor backgroundNav'>
                                 <Typography variant="h6" >
-                                    🔎 Descubra Mais
+                                    🔎 Descubra mais
                                 </Typography>
 
                             </Box>
                         </Link>
-                        <Link to='/' className='text-decorator-none'>
-                            <Box mx={1} className='cursor backgroundNav' onClick={goLogout}>
-                                <Typography variant="h6" >
-                                    Logout
+                        <Link to='/' className='text-decorator-none spaceLeft navPaddingCanto'>
+                            <Box mx={1} className='cursor backgroundNav ' onClick={goLogout}>
+                                <Typography className='corLetraRed' variant="h5" >
+                                    Sair
                                 </Typography>
 
                             </Box>

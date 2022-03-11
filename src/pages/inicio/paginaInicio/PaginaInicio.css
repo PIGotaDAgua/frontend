@@ -21,10 +21,29 @@ body{
     /* /* background texto com Imagem gif */
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+    
+}
+.fonteLogo{
+  font-weight: bold!important;
 }
 .nav{
     width: 100vw;
     height: 10vh;
+}
+.navPaddingInicio{
+  border-radius: 10px;
+      padding: 0px 30px;
+      color: #ffffff!important;
+}
+.navPaddingInicio:hover{
+  border-bottom-style: double!important;
+  border-color: #2cf257!important;
+  border: 2px;
+  /* padding: 0px 30px;*/ 
+
+}
+.corLetra:hover{
+  color: #12eb24!important;
 }
 .AppC{
     width: 100vw;

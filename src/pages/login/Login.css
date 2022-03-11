@@ -15,25 +15,26 @@
     border: 20px !important;
     border-radius: 10px !important;
     background-color: rgba(255, 255, 255, 0.02) !important;
-    ;
+    padding-bottom: 12%!important;
 }
 
 .formsLogin {
-    background: rgba(255, 255, 255, 0.2);
-    border-radius: 16px;
-    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 80px;
+    box-shadow: 0 4px 30px rgba(64, 105, 240, 0.9);
     backdrop-filter: blur(5px);
     -webkit-backdrop-filter: blur(5px);
-    border: 1px solid rgba(255, 255, 255, 0.3);
-    padding: 20px !important;
-    width: 30vw !important;
+    border: 1px solid rgba(110, 219, 67, 0.3);
+    padding: 30px !important;
+    width: 35vw !important;
 }
 
-.background {
-    background: url(https://i.imgur.com/9nNR0zp.jpg) no-repeat cover !important;
+.backgroundLogin {
+    background: url(https://i.imgur.com/9nNR0zp.jpg)  !important;
     /* background-size: cover; */
-    height: 100vh !important;
+    height: 105vh !important;
     background-attachment: fixed;
+    background-size: cover;
 }
 
 
@@ -44,4 +45,7 @@
 
 .textos1 {
     color: #000000 !important;
+}
+.btnSpace{
+    margin-right: 15px!important;
 }

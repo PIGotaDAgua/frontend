@@ -18,8 +18,8 @@ function Carousel() {
                     <ArrowBackIosIcon style={{ fontSize: 30}}/>
                 </div>
                 <div className='center'>
-                    <h1> {images[currImg].title} </h1>
-                    <p> {images[currImg].Subtitle} </p>
+                    <h1 className='titleH1'> {images[currImg].title} </h1>
+                    <p className='subtitleP' > {images[currImg].Subtitle} </p>
 
                 </div>
                 <div className='right' onClick={() => {

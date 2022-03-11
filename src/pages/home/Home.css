@@ -29,10 +29,10 @@ posts {
     direction: initial;
     justify-content: 'center' !important;
     align-items: 'center' !important;
-    padding: 100px;
+    padding: 50px;
 }
 
-.card {
+.cardHome {
     margin: 10px !important;
     height: 300px !important;
     width: 800px !important;
