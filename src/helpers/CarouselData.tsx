@@ -1,6 +1,6 @@
 import Slide1 from '../components/carousel/images/agua1gif.gif'
 import Slide2 from '../components/carousel/images/agua1.jpg'
-import Slide3 from '../components/carousel/images/gotaFlutuante.gif'
+import Slide3 from '../components/carousel/images/garotoAgua.jpg'
 
 export const images = [
     {
