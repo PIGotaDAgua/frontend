@@ -30,18 +30,6 @@ function TabPostagem() {
                         <Grid alignItems="center" item xs={6}>
                             <img src="https://i.imgur.com/O0BGiXx.png" alt="" width="500px" height="500px" />
                         </Grid>
-                        <Grid alignItems="center" item xs={6}>
-                            <Typography variant="body1" gutterBottom color="textPrimary" align="justify">
-                                <br />
-                                <br />
-                                Mussum Ipsum, cacilds vidis litro abertis. Todo mundo vê os porris que eu tomo, mas ninguém vê os tombis que eu levo!A ordem dos tratores não altera o pão duris.Suco de cevadiss deixa as pessoas mais interessantis.Delegadis gente finis, bibendum egestas augue arcu ut est.                                <br />
-                                <br />
-                                Mussum Ipsum, cacilds vidis litro abertis. Leite de capivaris, leite de mula manquis sem cabeça.Interessantiss quisso pudia ce receita de bolis, mais bolis eu num gostis.Pra lá , depois divoltis porris, paradis.Aenean aliquam molestie leo, vitae iaculis nisl.                                <br />
-                                <br />
-                                Mussum Ipsum, cacilds vidis litro abertis. Viva Forevis aptent taciti sociosqu ad litora torquent.Em pé sem cair, deitado sem dormir, sentado sem cochilar e fazendo pose.Diuretics paradis num copo é motivis de denguis.Todo mundo vê os porris que eu tomo, mas ninguém vê os tombis que eu levo!                                <br />
-                                <br />
-                                Mussum Ipsum, cacilds vidis litro abertis. Viva Forevis aptent taciti sociosqu ad litora torquent.Em pé sem cair, deitado sem dormir, sentado sem cochilar e fazendo pose.Diuretics paradis num copo é motivis de denguis.Todo mundo vê os porris que eu tomo, mas ninguém vê os tombis que eu levo!                            </Typography>
-                        </Grid>
                     </Grid>
                 </TabPanel>
             </TabContext>
