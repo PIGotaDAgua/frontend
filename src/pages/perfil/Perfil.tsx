@@ -79,7 +79,7 @@ function Perfil() {
                        <h3>Usuário: {user.usuario}</h3>   
                     </Typography>
                     <Typography className='dados' variant='body2' component='p' gutterBottom>
-                         <h3>Nascimento: {new Date(user.dataNascimento).toLocaleDateString("pt-br")}</h3>  
+                         <h3>Nascimento: {new Date(user.dataNascimento).toLocaleString("pt-br")}</h3>  
                     </Typography>
 
                 </Box>
