@@ -75,7 +75,7 @@ function Login() {
             });
         } catch (error) {
 
-            toast.error('Ops... Algo está errado. Verifique seu login e senha.', {
+            toast.error('Ops... Algo está errado. Dados inconsistentes.', {
                 position: 'top-right',
                 autoClose: 3000,
                 hideProgressBar: false,

@@ -78,10 +78,11 @@ function DeletarPostagem() {
             <Box justifyContent="center">
               <Typography color="textSecondary" gutterBottom>
 
-                <h2> Deseja deletar a Postagem:</h2>
+                <h2> Deseja realmente deletar essa postagem?</h2>
               </Typography>
               <Typography color="textSecondary" >
-                {post?.titulo}
+                
+                <h3>{post?.titulo}</h3>
               </Typography>
             </Box>
 

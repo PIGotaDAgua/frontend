@@ -56,8 +56,8 @@ function Home() {
                     </Box>
                     <br></br>
                 </Grid>
-                <Grid className="borderLogo"  item xs={6} >
-                    <img className="sombra" src="https://i.imgur.com/DbFlrkb.gif" alt="" width="90%" height="90%" />
+                <Grid item xs={6} >
+                    <img  src="https://i.imgur.com/DbFlrkb.gif" alt="" width="90%" height="90%" />
                 </Grid>
 
                 <hr className="hr" />

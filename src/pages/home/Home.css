@@ -32,15 +32,6 @@ posts {
     padding: 50px;
    
 }
-.sombra{
-    box-shadow: 0px 0px 10px rgba(64, 105, 240, 0.9)!important;
-    border-radius: 50%!important;
-}
-.borderLogo{
-    margin: 40px 0px 40px 0px!important;
-
-}
-
 .cardHome {
     margin: 10px !important;
     height: 300px !important;

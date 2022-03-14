@@ -74,9 +74,7 @@ function Perfil() {
                         <h2>Informações de cadastro</h2>
                     </p>
 
-                    <Typography className='dados' variant='body2' component='p'gutterBottom>
-                        <h3>Id:     {user.id}</h3>
-                    </Typography>
+            
                     <Typography className='dados' variant='body2' component='p' gutterBottom>
                        <h3>Usuário: {user.usuario}</h3>   
                     </Typography>
