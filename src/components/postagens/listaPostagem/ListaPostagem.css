@@ -1,3 +1,7 @@
+.tituloTema {
+    font-weight: bold !important;
+}
+
 /* .card {
     display: flex;
     justify-content: space-between!important;
