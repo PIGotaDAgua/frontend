@@ -5,14 +5,14 @@ import { buscaId, deleteId } from '../../../service/Service';
 import Tema from '../../../models/Tema';
 import { toast } from 'react-toastify';
 import { useSelector } from 'react-redux';
-import { TokenState } from '../../../store/tokens/userReducer';
+import { UserState } from '../../../store/user/userReducer';
 import './DeletarTema.css';
 
 
 function DeletarTema() {
     let history = useHistory();
     const { id } = useParams<{id: string}>();
-    const token = useSelector<TokenState, TokenState["tokens"]>(
+    const token = useSelector<UserState, UserState["tokens"]>(
         (state)=> state.tokens
         );    
     const [tema, setTema] = useState<Tema>()

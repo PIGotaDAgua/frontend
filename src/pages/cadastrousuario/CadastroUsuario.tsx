@@ -90,13 +90,22 @@ function CadastroUsuario() {
         <Box display='flex' className='container backgroundCadastro'>
             <Grid className='fundo' item xs={12}>
                 <Box display='flex' justifyContent={'center'} paddingX={10}>
+
                     <form className='formsCadastro' onSubmit={onSubmit}  >
-                    <Typography variant='h4' gutterBottom color='textPrimary' component='h3' align='center' style={{ fontWeight: 'bold' }} > Realize seu cadastro: </Typography>
+
+                        <Typography variant='h4' gutterBottom color='textPrimary' component='h3' align='center' style={{ fontWeight: 'bold' }} > Realize seu cadastro:
+                        </Typography>
+
                         <TextField value={user.nome} onChange={(e: ChangeEvent<HTMLInputElement>) => updatedModel(e)} id='nome' label='Nome' variant='outlined' name='nome' margin='normal' fullWidth required placeholder='Nome completo' />
+
                         <TextField value={user.usuario} onChange={(e: ChangeEvent<HTMLInputElement>) => updatedModel(e)} id='usuario' label='Usuário' variant='outlined' name='usuario' margin='normal' fullWidth required placeholder='email@email.com' />
+
                         <TextField value={user.foto} onChange={(e: ChangeEvent<HTMLInputElement>) => updatedModel(e)} id='foto' label='Foto' variant='outlined' name='foto' margin='normal' fullWidth placeholder='Insira o link da sua foto.' />
+
                         <TextField value={data} onChange={(e: ChangeEvent<HTMLInputElement>) => pegaData(e)} id="dataNascimento" label="Data de Nascimento" type="date" InputLabelProps={{ shrink: true, }} />
+
                         <TextField value={user.senha} onChange={(e: ChangeEvent<HTMLInputElement>) => updatedModel(e)} id='senha' label='Senha' variant='outlined' name='senha' margin='normal' type='password' fullWidth required placeholder='Insira no mínimo 8 digitos' />
+
                         <TextField value={confirmarSenha} onChange={(e: ChangeEvent<HTMLInputElement>) => confirmarSenhaHandle(e)} id='ConfirmarSenha' label='Confirmar senha' variant='outlined' name='confirmarSenha' margin='normal' type='password' fullWidth required placeholder='Confirmar senha de 8 digitos' />
 
                         <Box marginTop={2} textAlign='center'>
@@ -105,9 +114,11 @@ function CadastroUsuario() {
                                     Cancelar
                                 </Button>
                             </Link>
+                            
                             <Button type='submit' variant='contained' color='primary'>
                                 Cadastrar
                             </Button>
+
                         </Box>
                     </form>
                 </Box>

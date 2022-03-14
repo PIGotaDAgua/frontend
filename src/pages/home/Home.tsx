@@ -5,7 +5,7 @@ import { Link, useHistory } from "react-router-dom";
 import { toast } from "react-toastify";
 import ModalPostagem from "../../components/postagens/modalPostagem/ModalPostagem";
 import { useSelector } from "react-redux";
-import { TokenState } from "../../store/tokens/userReducer";
+import { UserState } from "../../store/user/userReducer";
 import Card from '@mui/material/Card';
 import CardContent from '@mui/material/CardContent';
 import CardMedia from '@mui/material/CardMedia';
@@ -17,7 +17,7 @@ import './Home.css';
 function Home() {
 
     let history = useHistory();
-    const token = useSelector<TokenState, TokenState["tokens"]>(
+    const token = useSelector<UserState, UserState["tokens"]>(
         (state) => state.tokens
     );
 
@@ -56,8 +56,8 @@ function Home() {
                     </Box>
                     <br></br>
                 </Grid>
-                <Grid item xs={6} >
-                    <img src="https://i.imgur.com/DbFlrkb.gif" alt="" width="100%" height="100%" />
+                <Grid className="borderLogo"  item xs={6} >
+                    <img className="sombra" src="https://i.imgur.com/DbFlrkb.gif" alt="" width="90%" height="90%" />
                 </Grid>
 
                 <hr className="hr" />

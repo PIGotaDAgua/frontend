@@ -5,23 +5,38 @@ import UserLogin from '../../models/UserLogin';
 import { login } from '../../service/Service';
 import { toast } from 'react-toastify';
 import { useDispatch } from 'react-redux';
-import { addToken } from '../../store/tokens/actions';
+import { addId, addToken } from '../../store/user/action';
 import './Login.css';
 
 function Login() {
 
     let history = useHistory();
     const dispatch = useDispatch();
-    const [token, setToken] = useState('');
+
     const [userLogin, setUserLogin] = useState<UserLogin>(
         {
             id: 0,
+            nome: '',
             usuario: '',
             senha: '',
-            token: ''
+            foto: '',
+            token: '',
+            dataNascimento: ''
         }
     )
-    // eslint-disable-next-line @typescript-eslint/no-unused-vars
+
+    const [respUserLogin, setRespUserLogin] = useState<UserLogin>(
+        {
+            id: 0,
+            nome: '',
+            usuario: '',
+            senha: '',
+            foto: '',
+            token: '',
+            dataNascimento: ''
+        }
+    )
+
     function updatedModel(e: ChangeEvent<HTMLInputElement>) {
         setUserLogin({
             ...userLogin,
@@ -30,18 +45,23 @@ function Login() {
     }
 
     useEffect(() => {
-        if (token != '') {
-            dispatch(addToken(token));
+        if(respUserLogin.token !== ""){
+
+            // Verifica os dados pelo console (Opcional)
+            console.log("Token: " + respUserLogin.token)
+            console.log("ID: " + respUserLogin.id)
+
+            // Guarda as informações dentro do Redux (Store)
+            dispatch(addToken(respUserLogin.token)) 
+            dispatch(addId(respUserLogin.id.toString()))    // Faz uma conversão de Number para String
             history.push('/home')
         }
-        // eslint-disable-next-line react-hooks/exhaustive-deps
-    }, [token])
+    }, [respUserLogin.token])
 
-    // eslint-disable-next-line @typescript-eslint/no-unused-vars
     async function onSubmit(e: ChangeEvent<HTMLFormElement>) {
         e.preventDefault();
         try {
-            await login(`/usuario/logar`, userLogin, setToken)
+            await login(`/usuario/logar`, userLogin, setRespUserLogin)
 
             toast.success('Você está conectado a nós!☺', {
                 position: 'top-right',
@@ -77,7 +97,9 @@ function Login() {
             <Box paddingX={20}>
                 <form className='formsLogin' onSubmit={onSubmit}>
                     <Typography variant='h3' gutterBottom color='textPrimary' component='h3' align='center' style={{ fontWeight: 'bold' }} > Entrar </Typography>
+
                     <TextField value={userLogin.usuario} onChange={(e: ChangeEvent<HTMLInputElement>) => updatedModel(e)} id='usuario' label='Usuário' variant='outlined' name='usuario' margin='normal' fullWidth required placeholder='email@email.com' />
+                    
                     <TextField value={userLogin.senha} onChange={(e: ChangeEvent<HTMLInputElement>) => updatedModel(e)} id='senha' label='Senha' variant='outlined' name='senha' margin='normal' type='password' fullWidth required placeholder='Insira a senha com no mínimo de 8 digitos' />
 
                     <Box display="flex" justifyContent="center">

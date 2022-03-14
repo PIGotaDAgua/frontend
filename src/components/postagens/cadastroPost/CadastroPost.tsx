@@ -6,17 +6,52 @@ import Postagem from '../../../models/Postagem';
 import { busca, buscaId, post, put } from '../../../service/Service';
 import { useSelector } from 'react-redux';
 import { toast } from 'react-toastify';
-import { TokenState } from '../../../store/tokens/userReducer';
+import { UserState } from '../../../store/user/userReducer';
 import './CadastroPost.css';
+import User from '../../../models/User';
 
 
 function CadastroPost() {
     let history = useHistory();
     const { id } = useParams<{ id: string }>();
     const [temas, setTemas] = useState<Tema[]>([])
-    const token = useSelector<TokenState, TokenState["tokens"]>(
+
+    const token = useSelector<UserState, UserState["tokens"]>(
          (state) => state.tokens
      );
+
+     // Pega o ID guardado no Store
+    const userId = useSelector<UserState, UserState["id"]>(
+        (state) => state.id
+    );
+
+    const [tema, setTema] = useState<Tema>(
+        {
+            id: 0,
+            tema: '',
+            descricao: ''
+        });
+
+    const [postagem, setPostagem] = useState<Postagem>(
+        {
+            id: 0,
+            titulo: '',
+            texto: '',
+            data: '',
+            imagem: '',
+            tema: null,
+            usuario: null
+        });
+
+    const [user, setUser] = useState<User>(
+        {
+            id: +userId,
+            nome: '',
+            usuario: '',
+            senha: '',
+            foto: '',
+            dataNascimento: ''
+        });
 
     useEffect(() => {
         if (token === "") {
@@ -34,21 +69,6 @@ function CadastroPost() {
         }
     }, [token])
 
-    const [tema, setTema] = useState<Tema>(
-        {
-            id: 0,
-            tema: '',
-            descricao: ''
-        });
-
-    const [postagem, setPostagem] = useState<Postagem>(
-        {
-            id: 0,
-            titulo: '',
-            texto: '',
-            tema: null
-        });
-
     useEffect(() => {
         setPostagem({
             ...postagem,
@@ -58,7 +78,7 @@ function CadastroPost() {
 
     useEffect(() => {
         getTemas()
-        if (id !== undefined) {
+        if (id !== '') {
             findByIdPostagem(id);
         }
     }, [id])
@@ -84,13 +104,16 @@ function CadastroPost() {
         setPostagem({
             ...postagem,
             [e.target.name]: e.target.value,
-            tema: tema
+            tema: tema,
+            usuario: user
         })
 
     }
 
     async function onSubmit(e: ChangeEvent<HTMLFormElement>) {
         e.preventDefault()
+
+        console.log(postagem)   
 
         if (id !== undefined) {
             put(`/postagem`, postagem, setPostagem, {
@@ -137,14 +160,18 @@ function CadastroPost() {
         <Container maxWidth="sm" className="topo">
             <form onSubmit={onSubmit}>
                 <Typography className='texto' variant="h4" color="textSecondary" component="h1" align="center" >No que você está pensando hoje?</Typography>
-                <TextField value={postagem.titulo} onChange={(e: ChangeEvent<HTMLInputElement>) => updatedPostagem(e)} id="titulo" label="Título" variant="outlined" name="titulo" margin="normal" fullWidth placeholder='Título*' required/>
-                <TextField value={postagem.texto} onChange={(e: ChangeEvent<HTMLInputElement>) => updatedPostagem(e)} id="texto" label="Texto" name="texto" variant="outlined" margin="normal" fullWidth placeholder='Escreva sua postagem*' required/>
+                <TextField value={postagem.titulo} onChange={(e: ChangeEvent<HTMLInputElement>) => updatedPostagem(e)} id="titulo" label="Título" variant="outlined" name="titulo" margin="normal" fullWidth placeholder='Título' required/>
+
+                <TextField value={postagem.texto} onChange={(e: ChangeEvent<HTMLInputElement>) => updatedPostagem(e)} id="texto" label="Texto" name="texto" variant="outlined" margin="normal" fullWidth placeholder='Escreva sua postagem' required/>
+
+                <TextField value={postagem.imagem} onChange={(e: ChangeEvent<HTMLInputElement>) => updatedPostagem(e)} id="imagem" label="Imagem" name="imagem" variant="outlined" margin="normal" fullWidth placeholder='Insira uma Url'/>
 
                 <FormControl >
                     <InputLabel id="demo-simple-select-helper-label">Tema </InputLabel>
                     <Select
                         labelId="demo-simple-select-helper-label"
                         id="demo-simple-select-helper"
+
                         onChange={(e) => buscaId(`/tema/${e.target.value}`, setTema, {
                             headers: {
                                 'Authorization': token

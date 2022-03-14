@@ -5,18 +5,18 @@ import GitHubIcon from '@material-ui/icons/GitHub';
 import EmailIcon from '@material-ui/icons/Email';
 import { Typography, Box, Grid } from '@material-ui/core';
 import { useSelector } from 'react-redux';
-import { TokenState } from '../../../store/tokens/userReducer';
+import { UserState } from '../../../store/user/userReducer';
 import './Footer.css';
 
 function Footer() {
 
-    const token = useSelector<TokenState, TokenState['tokens']>(
+    const token = useSelector<UserState, UserState['tokens']>(
         (state) => state.tokens
     );
 
     var footerComponent;
 
-    if (token != '') {
+    if (token !== '') {
         footerComponent = <Grid container direction="row" justifyContent="center" alignItems='center'>
             <Grid alignItems="center" item xs={12}>
                 <Box className='box1'>

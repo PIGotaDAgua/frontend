@@ -1,0 +1,16 @@
+.centerModal{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    /* margin-top: 50%!important; */
+    height: 50vh!important;
+
+}
+.centerModal1{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    padding-right: 15px;
+}

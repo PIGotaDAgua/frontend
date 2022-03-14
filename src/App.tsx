@@ -19,6 +19,7 @@ import DeletarPostagem from './components/postagens/deletarPostagem/DeletarPosta
 import { Provider } from 'react-redux';
 import store from './store/store';
 import './App.css';
+import Perfil from './pages/perfil/Perfil';
 import PaginaInicio from './pages/inicio/paginaInicio/PaginaInicio';
 
 function App() {
@@ -55,6 +56,9 @@ function App() {
             </Route>
             <Route path='/postagem'>
               <ListaPostagem />
+            </Route>
+            <Route path='/perfil'>
+              <Perfil />
             </Route>
             <Route exact path='/formularioPostagem'>
               <CadastroPost />
