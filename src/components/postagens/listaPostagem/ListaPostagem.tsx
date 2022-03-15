@@ -51,72 +51,76 @@ function ListaPostagem() {
     return (
         <>
             {
+
                 posts.map(post => (
-                    <Box className='fundo' m={2} >
-                        <Card variant="outlined" className='card'>
-                            <CardContent className='avatar'>
-                                <Grid className='conteudo'>
-                                    {/* <Typography color='textSecondary' gutterBottom>
+                    <Box className='fundo'>
+                        <Box m={2} >
+                            <Card variant="outlined" className='card'>
+                                <CardContent className='avatar'>
+                                    <Grid className='conteudo'>
+                                        {/* <Typography color='textSecondary' gutterBottom>
                                         Postagens
                                     </Typography> */}
 
-                                    <Typography variant='h5' component='h2' gutterBottom>
+                                        <Typography variant='h5' component='h2' gutterBottom>
 
-                                        <h2>{post.titulo}</h2>
-                                    </Typography>
-
-                                    <Typography variant='body2' component='p'>
-                                        
-                                        <h5>{new Date(post.data).toLocaleString("pt-br")}</h5>
-                                    </Typography>
-                                    <Typography variant='body2' component='p' gutterBottom>
-                                        {post.texto}
-                                    </Typography>
-                                    <Typography variant='body2' component='p' gutterBottom >
-
-                                        <h3>Tema: {post.tema?.tema}</h3>
-                                    </Typography>
-                                    <Box className='paddingTop'>
-                                        <img className='imgPost' src={post.imagem} alt='' />
-                                    </Box>
-
-                                </Grid>
-                                <Grid className='usuario'>
-                                    <Box className='usuarioNome'>
-                                        <Typography variant='body2' component='p'>
-                                            {post.usuario?.nome}
+                                            <h2>{post.titulo}</h2>
                                         </Typography>
+
                                         <Typography variant='body2' component='p'>
-                                            {post.usuario?.usuario}
+
+                                            <h5>{new Date(post.data).toLocaleString("pt-br")}</h5>
                                         </Typography>
-                                    </Box>
+                                        <Typography variant='body2' component='p' gutterBottom>
+                                            {post.texto}
+                                        </Typography>
+                                        <Typography variant='body2' component='p' gutterBottom >
 
-                                    <Box >
-                                        <Avatar className='fotoAvatar' alt="Remy Sharp" src={post.usuario?.foto} />
-                                    </Box>
-                                </Grid>
-
-                            </CardContent>
-                            <CardActions className='botaoEsquerda'>
-                                <Box display='flex' justifyContent='center' mb={1.5}>
-                                    <Link to={`/formularioPostagem/${post.id}`} className='text-decorator-none'>
-                                        <Box mx={1}>
-                                            <Button variant='contained' className='marginLeft' size='small' color='primary'>
-                                                Atualizar
-                                            </Button>
+                                            <h3>Tema: {post.tema?.tema}</h3>
+                                        </Typography>
+                                        <Box className='paddingTop'>
+                                            <img className='imgPost' src={post.imagem} alt='' />
                                         </Box>
-                                    </Link>
 
-                                    <Link to={`/deletarPostagem/${post.id}`} className='text-decorator-none padRight'>
-                                        <Box mx={1}>
-                                            <Button variant='contained' size='small' color='secondary'>
-                                                Deletar
-                                            </Button>
+                                    </Grid>
+                                    <Grid className='usuario'>
+                                        <Box className='usuarioNome'>
+                                            <Typography variant='body2' component='p'>
+                                                {post.usuario?.nome}
+                                            </Typography>
+                                            <Typography variant='body2' component='p'>
+                                                {post.usuario?.usuario}
+                                            </Typography>
                                         </Box>
-                                    </Link>
-                                </Box>
-                            </CardActions>
-                        </Card>
+
+                                        <Box >
+                                            <Avatar className='fotoAvatar' alt="Remy Sharp" src={post.usuario?.foto} />
+                                        </Box>
+                                    </Grid>
+
+                                </CardContent>
+                                <CardActions className='botaoEsquerda'>
+                                    <Box display='flex' justifyContent='center' mb={1.5}>
+                                        <Link to={`/formularioPostagem/${post.id}`} className='text-decorator-none'>
+                                            <Box mx={1}>
+                                                <Button variant='contained' className='marginLeft' size='small' color='primary'>
+                                                    Atualizar
+                                                </Button>
+                                            </Box>
+                                        </Link>
+
+                                        <Link to={`/deletarPostagem/${post.id}`} className='text-decorator-none padRight'>
+                                            <Box mx={1}>
+                                                <Button variant='contained' size='small' color='secondary'>
+                                                    Deletar
+                                                </Button>
+                                            </Box>
+                                        </Link>
+                                    </Box>
+                                </CardActions>
+                            </Card>
+                        </Box>
+
                     </Box>
                 ))
             }

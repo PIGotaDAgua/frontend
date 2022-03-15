@@ -39,7 +39,7 @@ function Home() {
     }, [token])
     return (
         <>
-            <Grid container direction="row" justifyContent="center" alignItems="center" className="box">
+            <Grid container direction="row" justifyContent="center" alignItems="center" className="box container">
                 <Grid alignItems="center" item xs={6}>
                     <Box paddingX={20} >
                         <Typography variant="h4" gutterBottom color="textPrimary" component="h4" align="center" className="title" >Bem vinde a Gota d'água</Typography>

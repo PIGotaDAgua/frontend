@@ -2,6 +2,7 @@
     font-weight: bold !important;
 }
 
+
 /* .card {
     display: flex;
     justify-content: space-between!important;
@@ -10,54 +11,62 @@
     justify-content: center;
     border-radius: 10px !important;
 } */
-.text-decorator-none{
+
+.text-decorator-none {
     text-decoration: none;
 }
-.avatar{
+
+.avatar {
     display: flex;
     justify-content: space-between;
-
+    border-radius: 20px !important;
 }
-.usuario{
+
+.usuario {
     display: flex;
     direction: row;
     align-items: top;
     justify-content: center;
     padding-right: 20px!important;
+    border-radius: 10px !important;
 }
-.usuarioNome{
+
+.usuarioNome {
     padding-right: 20px!important;
 }
-.botaoEsquerda{
+
+.botaoEsquerda {
     justify-content: end;
 }
-.conteudo{
+
+.conteudo {
     display: flex;
     flex-direction: column;
     padding: 20px!important;
-    
 }
-.fotoAvatar{
+
+.fotoAvatar {
     background-size: cover;
-    padding: 10px, 0px, 10px,0px!important;
+    padding: 10px, 0px, 10px, 0px!important;
 }
-.imgPost{
+
+.imgPost {
     max-width: 700px;
     /* min-width: none; */
     max-height: 500px;
     background-size: cover;
     border-radius: 30px;
 }
-.padRight{
+
+.padRight {
     padding-right: 30px;
 }
-.paddingTop{
+
+.paddingTop {
     padding-top: 20px;
     padding-left: 100px;
-
 }
-.fundo{
-    /* background-image: url('https://acegif.com/wp-content/gifs/water-20.gif')!important; */
-    background-size: cover!important;
-    background-color: blue;
+
+body {
+    background-color: rgb(230, 248, 253) !important
 }
