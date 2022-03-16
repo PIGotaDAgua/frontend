@@ -1,6 +1,19 @@
 .tituloTema {
     font-weight: bold !important;
 }
+.text-decorator-none3{
+    text-decoration: none!important;
+    color: #2980b9!important;
+}
+.favorito{
+    color: #ff0000!important;
+}
+.emoji{
+    color: #f1c40f!important;
+}
+.share{
+    color: #4169E1!important;
+}
 
 /* .card {
     display: flex;
@@ -29,13 +42,35 @@
     padding-right: 20px!important;
 }
 .botaoEsquerda{
-    justify-content: end;
+    justify-content: end!important;
+}
+.MuiBox-root-71{
+    display: flex!important;
+    margin-bottom: 12px!important;
+    justify-content: space-between!important;
+    width: 100vw!important;
+    align-items: center!important;
+}
+.spaceIconCurtir{
+    justify-content: space-between!important;
+    width: 90vw!important;
+}
+.spaceBarraComent{
+    display: flex!important;
+    margin-bottom: 12px!important;
+    justify-content: space-around!important;
+    /* padding-left: 30px!important; */
+    width: 20vw!important;
 }
 .conteudo{
     display: flex;
     flex-direction: column;
     padding: 20px!important;
     
+}
+.denuncie{
+    padding: 5px!important;
+    background-color: #ff0000!important;
 }
 .fotoAvatar{
     background-size: cover;

@@ -7,6 +7,10 @@ import { useHistory } from 'react-router-dom'
 import { useSelector } from 'react-redux';
 import { toast } from 'react-toastify';
 import { UserState } from '../../../store/user/userReducer';
+import ThumbUpRoundedIcon from '@mui/icons-material/ThumbUpRounded';
+import FavoriteRoundedIcon from '@mui/icons-material/FavoriteRounded';
+import EmojiEmotionsRoundedIcon from '@mui/icons-material/EmojiEmotionsRounded';
+import ShareRoundedIcon from '@mui/icons-material/ShareRounded';
 import './ListaPostagem.css';
 
 
@@ -66,7 +70,7 @@ function ListaPostagem() {
                                     </Typography>
 
                                     <Typography variant='body2' component='p'>
-                                        
+
                                         <h5>{new Date(post.data).toLocaleString("pt-br")}</h5>
                                     </Typography>
                                     <Typography variant='body2' component='p' gutterBottom>
@@ -97,23 +101,57 @@ function ListaPostagem() {
                                 </Grid>
 
                             </CardContent>
-                            <CardActions className='botaoEsquerda'>
-                                <Box display='flex' justifyContent='center' mb={1.5}>
-                                    <Link to={`/formularioPostagem/${post.id}`} className='text-decorator-none'>
-                                        <Box mx={1}>
-                                            <Button variant='contained' className='marginLeft' size='small' color='primary'>
-                                                Atualizar
-                                            </Button>
-                                        </Box>
-                                    </Link>
 
-                                    <Link to={`/deletarPostagem/${post.id}`} className='text-decorator-none padRight'>
-                                        <Box mx={1}>
-                                            <Button variant='contained' size='small' color='secondary'>
-                                                Deletar
-                                            </Button>
+                            <CardActions className='botaoEsquerda'>
+                                <Box className='spaceIconCurtir' display='flex' justifyContent='center' mb={1.5}>
+
+
+
+                                    <Box className='spaceBarraComent' display='flex' justifyContent='center' mb={1.5}>
+                                        <Link className='text-decorator-none3' to="/postagem" >
+                                        <Box>
+                                            <ThumbUpRoundedIcon />
                                         </Box>
-                                    </Link>
+                                        </Link>
+                                        <Link to="/postagem">
+                                        <Box className='favorito' >
+                                            <FavoriteRoundedIcon />
+                                        </Box>
+                                        </Link>
+                                        <Link to="/postagem">
+                                        <Box className='emoji' >
+                                            <EmojiEmotionsRoundedIcon />
+                                        </Box>
+                                        </Link>
+                                        <Link to="/postagem">
+                                        <Box className='share' >
+                                            <ShareRoundedIcon />
+                                        </Box>
+                                        </Link>
+                                        <Button className='denuncie'>
+                                            Denuncie
+                                        </Button>
+
+                                    </Box>
+
+                                    <Box display='flex' justifyContent='center' mb={1.5}>
+                                        <Link to={`/formularioPostagem/${post.id}`} className='text-decorator-none'>
+                                            <Box mx={1}>
+                                                <Button variant='contained' className='marginLeft' size='small' color='primary'>
+                                                    Atualizar
+                                                </Button>
+                                            </Box>
+                                        </Link>
+
+                                        <Link to={`/deletarPostagem/${post.id}`} className='text-decorator-none padRight'>
+                                            <Box mx={1}>
+                                                <Button variant='contained' size='small' color='secondary'>
+                                                    Deletar
+                                                </Button>
+                                            </Box>
+                                        </Link>
+                                    </Box>
+
                                 </Box>
                             </CardActions>
                         </Card>
