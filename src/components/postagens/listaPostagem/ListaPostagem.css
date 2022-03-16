@@ -1,17 +1,19 @@
 .tituloTema {
     font-weight: bold !important;
 }
-
-
-/* .card {
-    display: flex;
-    justify-content: space-between!important;
-    width: 95vw!important;
-    height: auto!important;
-    justify-content: center;
-    border-radius: 10px !important;
-} */
-
+.text-decorator-none3{
+    text-decoration: none!important;
+    color: #2980b9!important;
+}
+.favorito{
+    color: #ff0000!important;
+}
+.emoji{
+    color: #f1c40f!important;
+}
+.share{
+    color: #4169E1!important;
+}
 .text-decorator-none {
     text-decoration: none;
 }
@@ -34,9 +36,26 @@
 .usuarioNome {
     padding-right: 20px!important;
 }
-
-.botaoEsquerda {
-    justify-content: end;
+.botaoEsquerda{
+    justify-content: end!important;
+}
+.MuiBox-root-71{
+    display: flex!important;
+    margin-bottom: 12px!important;
+    justify-content: space-between!important;
+    width: 100vw!important;
+    align-items: center!important;
+}
+.spaceIconCurtir{
+    justify-content: space-between!important;
+    width: 90vw!important;
+}
+.spaceBarraComent{
+    display: flex!important;
+    margin-bottom: 12px!important;
+    justify-content: space-around!important;
+    /* padding-left: 30px!important; */
+    width: 20vw!important;
 }
 
 .conteudo {
@@ -44,8 +63,13 @@
     flex-direction: column;
     padding: 20px!important;
 }
-
-.fotoAvatar {
+.denuncie{
+    padding: 5px!important;
+    background-color: #ff0000!important;
+    color: #ffffff!important;
+    font-weight: bold!important;
+}
+.fotoAvatar{
     background-size: cover;
     padding: 10px, 0px, 10px, 0px!important;
 }

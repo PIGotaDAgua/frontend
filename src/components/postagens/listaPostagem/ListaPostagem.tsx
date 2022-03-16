@@ -7,6 +7,10 @@ import { useHistory } from 'react-router-dom'
 import { useSelector } from 'react-redux';
 import { toast } from 'react-toastify';
 import { UserState } from '../../../store/user/userReducer';
+import ThumbUpRoundedIcon from '@mui/icons-material/ThumbUpRounded';
+import FavoriteRoundedIcon from '@mui/icons-material/FavoriteRounded';
+import EmojiEmotionsRoundedIcon from '@mui/icons-material/EmojiEmotionsRounded';
+import ShareRoundedIcon from '@mui/icons-material/ShareRounded';
 import './ListaPostagem.css';
 
 
@@ -51,55 +55,85 @@ function ListaPostagem() {
     return (
         <>
             {
-
                 posts.map(post => (
-                    <Box className='fundo'>
-                        <Box m={2} >
-                            <Card variant="outlined" className='card'>
-                                <CardContent className='avatar'>
-                                    <Grid className='conteudo'>
-                                        {/* <Typography color='textSecondary' gutterBottom>
+                    <Box className='fundo' m={2} >
+                        <Card variant="outlined" className='card'>
+                            <CardContent className='avatar'>
+                                <Grid className='conteudo'>
+                                    {/* <Typography color='textSecondary' gutterBottom>
                                         Postagens
                                     </Typography> */}
 
-                                        <Typography variant='h5' component='h2' gutterBottom>
+                                    <Typography variant='h5' component='h2' gutterBottom>
 
-                                            <h2>{post.titulo}</h2>
-                                        </Typography>
+                                        <h2>{post.titulo}</h2>
+                                    </Typography>
 
+                                    <Typography variant='body2' component='p'>
+
+                                        <h5>{new Date(post.data).toLocaleString("pt-br")}</h5>
+                                    </Typography>
+                                    <Typography variant='body2' component='p' gutterBottom>
+                                        {post.texto}
+                                    </Typography>
+                                    <Typography variant='body2' component='p' gutterBottom >
+
+                                        <h3>Tema: {post.tema?.tema}</h3>
+                                    </Typography>
+                                    <Box className='paddingTop'>
+                                        <img className='imgPost' src={post.imagem} alt='' />
+                                    </Box>
+
+                                </Grid>
+                                <Grid className='usuario'>
+                                    <Box className='usuarioNome'>
                                         <Typography variant='body2' component='p'>
-
-                                            <h5>{new Date(post.data).toLocaleString("pt-br")}</h5>
+                                            {post.usuario?.nome}
                                         </Typography>
-                                        <Typography variant='body2' component='p' gutterBottom>
-                                            {post.texto}
+                                        <Typography variant='body2' component='p'>
+                                            {post.usuario?.usuario}
                                         </Typography>
-                                        <Typography variant='body2' component='p' gutterBottom >
+                                    </Box>
 
-                                            <h3>Tema: {post.tema?.tema}</h3>
-                                        </Typography>
-                                        <Box className='paddingTop'>
-                                            <img className='imgPost' src={post.imagem} alt='' />
+                                    <Box >
+                                        <Avatar className='fotoAvatar' alt="Remy Sharp" src={post.usuario?.foto} />
+                                    </Box>
+                                </Grid>
+
+                            </CardContent>
+
+                            <CardActions className='botaoEsquerda'>
+                                <Box className='spaceIconCurtir' display='flex' justifyContent='center' mb={1.5}>
+
+
+
+                                    <Box className='spaceBarraComent' display='flex' justifyContent='center' mb={1.5}>
+                                        <Link className='text-decorator-none3' to="/postagem" >
+                                        <Box>
+                                            <ThumbUpRoundedIcon />
                                         </Box>
-
-                                    </Grid>
-                                    <Grid className='usuario'>
-                                        <Box className='usuarioNome'>
-                                            <Typography variant='body2' component='p'>
-                                                {post.usuario?.nome}
-                                            </Typography>
-                                            <Typography variant='body2' component='p'>
-                                                {post.usuario?.usuario}
-                                            </Typography>
+                                        </Link>
+                                        <Link to="/postagem">
+                                        <Box className='favorito' >
+                                            <FavoriteRoundedIcon />
                                         </Box>
-
-                                        <Box >
-                                            <Avatar className='fotoAvatar' alt="Remy Sharp" src={post.usuario?.foto} />
+                                        </Link>
+                                        <Link to="/postagem">
+                                        <Box className='emoji' >
+                                            <EmojiEmotionsRoundedIcon />
                                         </Box>
-                                    </Grid>
+                                        </Link>
+                                        <Link to="/postagem">
+                                        <Box className='share' >
+                                            <ShareRoundedIcon />
+                                        </Box>
+                                        </Link>
+                                        <Button className='denuncie'>
+                                            Denuncie
+                                        </Button>
 
-                                </CardContent>
-                                <CardActions className='botaoEsquerda'>
+                                    </Box>
+
                                     <Box display='flex' justifyContent='center' mb={1.5}>
                                         <Link to={`/formularioPostagem/${post.id}`} className='text-decorator-none'>
                                             <Box mx={1}>
@@ -117,10 +151,10 @@ function ListaPostagem() {
                                             </Box>
                                         </Link>
                                     </Box>
-                                </CardActions>
-                            </Card>
-                        </Box>
 
+                                </Box>
+                            </CardActions>
+                        </Card>
                     </Box>
                 ))
             }
